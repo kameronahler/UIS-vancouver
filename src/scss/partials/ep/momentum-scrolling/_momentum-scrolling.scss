@@ -1,0 +1,10 @@
+// theme has html at 100% height inline
+html {
+    overflow: visible;
+}
+
+// theme has body at 100% min-height inline
+body {
+    height: auto;
+    overflow: visible;
+}

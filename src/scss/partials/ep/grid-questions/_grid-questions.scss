@@ -1,0 +1,126 @@
+// mobile only
+@include bp(max-lg) {
+
+    .webform-component-grid {
+    	//remove sticky header thing that doesn't work that well and takes up a lot of room
+		.sticky-header{
+			display:none;
+		}
+        // remove useless thead that repeats the options
+        thead {
+            display: none;
+        }
+    }
+
+    // remove hover effect and general styling
+    table.webform-grid {
+        @include reset-box-sizing;
+
+		border:none;
+
+        tr {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border:none;
+        }
+
+        tr.even,
+        tr.odd{
+	        td {
+	            // padding: .5rem;
+	            text-align: center;
+	            background:#fafafa;
+	        }
+
+        	&:hover {
+        	    td {
+        	        background-color: #fafafa;
+        	    }
+        	}
+        }
+
+    }
+    
+    // style for question title td
+    .webform-grid-question {
+		padding:0 1rem 1rem;
+		font-weight:700;
+		background:inherit !important;
+
+		// hide question title td's sepearator line
+    	.theader{
+    		display:none;
+    	}
+    }
+
+    // style grid options
+    .webform-grid-option {
+        min-height: 50px;
+        padding:.5rem;
+
+        &:nth-of-type(even),
+        &:nth-of-type(odd){
+        	margin:0 auto 1rem;
+        }
+
+        &:last-of-type{
+			margin-bottom:0;
+        }
+
+        .theader{
+        	display:block;
+        	margin-bottom:.5rem;
+        	border-bottom:none;
+        	text-align:center;
+
+        	& + .form-item{
+        		width:100%;
+        		display:block;
+        		text-align:center;
+
+        		input{
+        			float:none;
+        			margin:0;
+        		}
+        	}
+        }
+    }
+}
+
+// centers the radio button input on the lg bp grid
+.webform-grid-option {
+    .form-type-radio{
+        input[type="radio"]{
+            float:none;
+            margin:.125rem;
+        }
+    }
+}
+
+// make grid question sticky header for lg bp actually visible
+.webform-component-grid {
+    .sticky-header{
+        @include bp(lg){
+            z-index:1;
+        }
+    }
+}
+
+// this fixes alignment on ALL checkbox questions if topcoat is not being loaded (i.e. on a grid question)
+.form-type-checkbox{
+    label{
+        margin-left:.125em;
+        vertical-align:middle;
+    }
+    .topcoat-checkbox__checkmark{
+        display:inline-block;
+    }
+}
+
+// fix overflow problem on grid question
+// this fix has to do with the javascript that adds the .element-invisible class to the label
+// the label is clipped with css, but the width is not defined and the position is absolute so it overflows the container
+// there are so many of these in one question
+.element-invisible{
+    max-width:100%;
+}

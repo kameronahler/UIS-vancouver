@@ -1,0 +1,190 @@
+/***********************************
+Layout
+************************************/
+
+/* Container - sorta */
+.paragraphs-items-field-body {
+    @include box-sizing;
+    // padding: 0 1em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+/* Row
+---------------------------*/
+
+.paragraphs-item-bp3-row {
+    // margin: 0 -1em;
+    @include bp-min-s {
+        &::before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+}
+
+//relies on #region-inner having 16px of padding
+@include bp-min-m{
+    .paragraphs-item-bp3-row.full {
+        margin: 0 -1rem;
+        width: calc(100% + 2rem);
+    }
+}
+
+/* Columns, Padding, Offsets, Push, Pull
+---------------------------*/
+
+.width-20,
+.width-25,
+.width-33,
+.width-40,
+.width-50,
+.width-60,
+.width-66,
+.width-75,
+.width-80,
+.width-100 {
+    width: 100%;
+    @include bp-min-s {
+        float: left;
+        position: relative;
+    }
+}
+
+// small widths, offsets, push, pull
+// this breakpoint's styling does not bubble up
+@media (min-width:$bp-min-s) and (max-width:$bp-max-m) {
+    @include special-offsets-s;
+
+    @each $class,
+    $percentage in $widths {
+        .width-s-#{$class} {
+            width: $percentage;
+        }
+        .offset-s-#{$class} {
+            margin-left: $percentage;
+        }
+        .push-s-#{$class} {
+            left: $percentage;
+        }
+        .pull-s-#{$class} {
+            right: $percentage;
+        }
+    }
+}
+
+// medium widths, offsets, push, pull (this is where our container stops being fluid)
+// this is where the non-mobile styling starts by default, even though there is a small breakpoint.
+// we style this breakpoint as the default non-mobile because it has a fixed container, whereas
+// the small breakpoint is fluid.
+@include bp-min-m {
+    @include special-offsets-m;
+
+    @each $class,
+    $percentage in $widths {
+        .width-#{$class} {
+            width: $percentage;
+        }
+        .width-m-#{$class} {
+            width: $percentage;
+        }
+        .offset-m-#{$class} {
+            margin-left: $percentage;
+        }
+        .push-m-#{$class} {
+            left: $percentage;
+        }
+        .pull-m-#{$class} {
+            right: $percentage;
+        }
+    }
+    .offset-m-none {
+        margin-left: initial;
+    }
+    .push-m-none {
+        left: auto;
+    }
+    .pull-m-none {
+        right: auto;
+    }
+}
+
+// large widths, offsets, push, pull
+@include bp-min-l {
+    @include special-offsets-l;
+
+    @each $class,
+    $percentage in $widths {
+        .width-l-#{$class} {
+            width: $percentage;
+        }
+        .offset-l-#{$class} {
+            margin-left: $percentage;
+        }
+        .push-l-#{$class} {
+            left: $percentage;
+        }
+        .pull-l-#{$class} {
+            right: $percentage;
+        }
+    }
+    .offset-l-none {
+        margin-left: initial;
+    }
+    .push-l-none {
+        left: auto;
+    }
+    .pull-l-none {
+        right: auto;
+    }
+}
+
+// padding, spacer
+
+// trying to simplicfy the selectors
+// .paragraphs-item-bp3-row .paragraphs-items-field-bp3-section > .field > .field-items >.field-item > .entity-paragraphs-item {
+.paragraphs-item-bp3-row .entity-paragraphs-item {
+    //default
+    padding: $unit;
+
+    //all bps
+    @include padding-maker;
+
+    //just small
+    @media (min-width:$bp-min-s) and (max-width:$bp-max-m) {
+        @include padding-maker-bp(s)
+    }
+
+    //medium up
+    @include bp-min-m {
+        @include padding-maker-bp(m)
+    }
+
+    //large up
+    @include bp-min-l {
+        @include padding-maker-bp(l)
+    }
+}
+
+//row spacer - bottom margin
+.paragraphs-item-bp3-row {
+    //all bps
+    @include spacer-maker;
+
+    //just small
+    @media (min-width:$bp-min-s) and (max-width:$bp-max-m) {
+        @include spacer-maker-bp(s);
+    }
+
+    //medium up
+    @include bp-min-m {
+        @include spacer-maker-bp(m);
+    }
+
+    //large up
+    @include bp-min-l {
+        @include spacer-maker-bp(l);
+    }
+}

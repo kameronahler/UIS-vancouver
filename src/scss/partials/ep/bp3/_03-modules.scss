@@ -1,0 +1,125 @@
+/***********************************
+Modules
+************************************/
+
+/* Text around quote
+---------------------------*/
+.paragraphs-item-quote{
+    .field-name-field-text .field-item{
+        margin:#{$body-lineheight * 0.4}rem auto;
+        background:#f5f5f5;
+        padding:#{$body-lineheight * 0.6}rem;
+        border-left:.25rem solid #ddd;
+    }
+}    
+
+.field-name-field-quotewithtext{
+    width:85%;
+    margin:#{$body-lineheight * 0.4}rem auto;
+    background:#f5f5f5;
+    padding:#{$body-lineheight * 0.6}rem;
+    border-left:.25rem solid #ddd;
+
+    @include bp-min-m{
+        width:40%;
+        float:right;
+        padding:#{$body-lineheight}rem;
+        margin:0 0 1rem 1rem;
+    }
+}
+
+/* Code
+---------------------------*/
+.field-name-field-code{
+    width:100%;
+    margin:#{$body-lineheight * 0.4}rem auto;
+    background:#f5f5f5;
+    padding:#{$body-lineheight * 0.6}rem;
+    border-left:.25rem solid #C23748;
+    font-family: 'Monaco', 'Andale Mono', 'Consolas', 'Lucida Console', 'Courier New', monospace;
+}
+
+
+
+/* Images
+---------------------------*/
+// centered fluid images
+.paragraphs-item-image{
+    .paragraphs-image {
+        display:block;
+        max-width: 100%;
+        height:auto;
+        margin:0 auto #{$body-lineheight / 2}rem;
+    }
+    .field-name-field-caption-text{
+        width:90%;
+        margin:0 auto;
+        text-align:center;
+    }    
+}
+
+
+
+/* List of links bundle
+---------------------------*/
+.paragraphs-item-link {
+    margin-bottom:#{$body-lineheight}rem;
+    @include bp-min-m{
+        margin-bottom:#{$body-lineheight / 2}rem;
+    }
+    
+    .field-name-field-thumbnail-image{
+        max-width:4.5rem;
+        margin:0 auto #{$body-lineheight / 4}rem;
+        
+        @include bp-min-m{
+            display:inline-block;
+            vertical-align:middle;
+            margin-right:#{$body-lineheight / 2}rem;
+            margin-bottom:0;
+        }
+        
+        .paragraphs-image{
+            display:block;
+            margin:0 auto;
+            width:100%;
+            height:auto;
+
+            @include bp-min-m{
+                display:inline-block;
+                vertical-align:middle;
+                margin: 0 #{$body-lineheight / 2}rem 0 0;
+            }
+        }
+    }
+
+    .field-name-field-link{
+        vertical-align:middle;
+        text-align:center;
+        
+        @include bp-min-m{
+            text-align:left;
+            display:inline-block;
+        }
+
+        div {
+            display:inline-block;
+            vertical-align:middle;
+            margin:0;
+            padding:0;
+        }
+        a{
+
+        }
+    }
+}
+
+.field-name-field-links > .field-items > .field-item:last-child .paragraphs-item-link{
+    margin-bottom:0;
+}
+
+/* Read more link
+---------------------------*/
+.paragraphs-item-text-read-more .read-more-link {
+    display: inline-block;
+}

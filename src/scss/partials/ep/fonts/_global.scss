@@ -1,0 +1,92 @@
+//font fixes for all engagingplans pages
+html {
+    font-size: 100%
+}
+
+body {
+    @include font(13);
+}
+
+// things like search button
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+.comment-links ul li a,
+.button,
+.field-name-field-document {
+    @include font(14);
+}
+
+// general inputs
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    @include font(13);
+}
+
+// headers
+.node-type-poll h1#page-title, .node-type-open-question h1#page-title, .node-type-webform h1#page-title, .node-type-bold-ideas h1#page-title{
+    @include font(18);
+}
+h1{
+    @include font(30);
+}
+h2 {
+    @include font(19);
+}
+
+h3{
+    @include font(17);
+}
+
+h4,
+h5,
+h6 {
+    @include font(15);
+}
+
+// buttons
+
+html button,
+html input[type="reset"],
+html input[type="submit"],
+html input[type="button"],
+html .comment-links ul li a,
+html .button,
+html .field-name-field-document,
+.view-documents .views-field-view-node a,
+.view-documents.view-display-id-page span.field-content.button a,
+.view-documents.view-display-id-page span.file a {
+    font-weight: normal;
+}
+
+// google translate suuuuucks
+// can't style inside of menu because it's an iframe
+.goog-te-gadget-simple{
+	font-size:.8125rem !important
+}
+
+// footer
+#zone-footer{
+	@include font(11)
+}
+
+// main menu navigation
+@media all and (min-width:740px) and (min-device-width:740px), (max-device-width:800px) and (min-width:740px) and (orientation:landscape) {
+	#block-system-main-menu ul li a{
+		font-size:.9375rem !important
+	}
+}

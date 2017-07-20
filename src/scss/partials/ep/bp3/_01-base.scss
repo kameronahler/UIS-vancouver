@@ -1,0 +1,286 @@
+/***********************************
+Base
+************************************/
+
+
+/* Variables
+-----------------------------------*/
+$bp-max-s:#{(543/16)}em;
+$bp-min-s:#{(544/16)}em;
+$bp-max-m:#{(739/16)}em;
+$bp-min-m:#{(740/16)}em;
+$bp-max-l:#{(979/16)}em;
+$bp-min-l:#{(980/16)}em;
+$widths:(20, 20%),
+		(25, 25%),
+		(33, 33.33334%),
+		(40, 40%),
+		(50, 50%),
+		(60, 60%),
+		(66, 66.66667%),
+		(75, 75%),
+		(80, 80%),
+        (100, 100%);
+$special-offsets: (37_5, 37.5%),
+		(30, 30%),
+		(16_66, 16.66667%),
+		(12_5, 12.5%),
+		(10, 10%),
+		(8_33, 8.33334%),
+		(6_66, 6.66667%),
+		(5, 5%);
+$unit:1rem;
+$body-lineheight:1.45;
+
+/* Mixins
+-----------------------------------*/
+
+@mixin box-sizing {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box
+    }
+}
+
+@mixin bp-max-s {
+    @media (max-width: $bp-max-s) {
+        @content;
+    }
+}
+
+@mixin bp-max-m {
+    @media (max-width: $bp-max-m) {
+        @content;
+    }
+}
+
+@mixin bp-max-l {
+    @media (max-width: $bp-max-l) {
+        @content;
+    }
+}
+
+@mixin bp-min-s {
+    @media (min-width: $bp-min-s) {
+        @content;
+    }
+}
+
+@mixin bp-min-m {
+    @media (min-width: $bp-min-m) {
+        @content;
+    }
+}
+
+@mixin bp-min-l {
+    @media (min-width: $bp-min-l) {
+        @content;
+    }
+}
+
+@mixin special-offsets-s {
+    @each $name,
+    $amount in $special-offsets {
+        .offset-s-#{$name} {
+            margin-left: $amount;
+        }
+    }
+}
+
+@mixin special-offsets-m {
+    @each $name,
+    $amount in $special-offsets {
+        .offset-m-#{$name} {
+            margin-left: $amount;
+        }
+    }
+}
+
+@mixin special-offsets-l {
+    @each $name,
+    $amount in $special-offsets {
+        .offset-l-#{$name} {
+            margin-left: $amount;
+        }
+    }
+}
+
+@mixin padding-maker {
+    &.no {
+        &-padding {
+            padding: 0;
+        }
+        &-padding-left {
+            padding-left: 0;
+        }
+        &-padding-right {
+            padding-right: 0;
+        }
+        &-padding-top {
+            padding-top: 0;
+        }
+        &-padding-bottom {
+            padding-bottom: 0;
+        }
+    }
+    &.double {
+        &-padding {
+            padding: $unit * 2;
+        }
+        &-padding-left {
+            padding-left: $unit * 2;
+        }
+        &-padding-right {
+            padding-right: $unit * 2;
+        }
+        &-padding-top {
+            padding-top: $unit * 2;
+        }
+        &-padding-bottom {
+            padding-bottom: $unit * 2;
+        }
+    }
+    &.triple {
+        &-padding {
+            padding: $unit * 3;
+        }
+        &-padding-left {
+            padding-left: $unit * 3;
+        }
+        &-padding-right {
+            padding-right: $unit * 3;
+        }
+        &-padding-top {
+            padding-top: $unit * 3;
+        }
+        &-padding-bottom {
+            padding-bottom: $unit * 3;
+        }
+    }
+}
+
+@mixin padding-maker-bp ($bp) {
+    &.no-#{$bp} {
+        &-padding {
+            padding: 0;
+        }
+        &-padding-left {
+            padding-left: 0;
+        }
+        &-padding-right {
+            padding-right: 0;
+        }
+        &-padding-top {
+            padding-top: 0;
+        }
+        &-padding-bottom {
+            padding-bottom: 0;
+        }
+    }
+    &.normal-#{$bp} {
+        &-padding {
+            padding: $unit;
+        }
+        &-padding-left {
+            padding-left: $unit;
+        }
+        &-padding-right {
+            padding-right: $unit;
+        }
+        &-padding-top {
+            padding-top: $unit;
+        }
+        &-padding-bottom {
+            padding-bottom: $unit;
+        }
+    }
+    &.double-#{$bp} {
+        &-padding {
+            padding: $unit * 2;
+        }
+        &-padding-left {
+            padding-left: $unit * 2;
+        }
+        &-padding-right {
+            padding-right: $unit * 2;
+        }
+        &-padding-top {
+            padding-top: $unit * 2;
+        }
+        &-padding-bottom {
+            padding-bottom: $unit * 2;
+        }
+    }
+    &.triple-#{$bp} {
+        &-padding {
+            padding: $unit * 3;
+        }
+        &-padding-left {
+            padding-left: $unit * 3;
+        }
+        &-padding-right {
+            padding-right: $unit * 3;
+        }
+        &-padding-top {
+            padding-top: $unit * 3;
+        }
+        &-padding-bottom {
+            padding-bottom: $unit * 3;
+        }
+    }
+}
+
+@mixin spacer-maker {
+    &.spacer {
+        margin-bottom: $unit;
+    }
+    &.double-spacer {
+        margin-bottom: $unit * 2;
+    }
+    &.triple-spacer {
+        margin-bottom: $unit * 3;
+    }
+}
+
+@mixin spacer-maker-bp ($bp) {
+    &.spacer-#{$bp} {
+        margin-bottom: $unit;
+    }
+    &.double-#{$bp}-spacer {
+        margin-bottom: $unit * 2;
+    }
+    &.triple-#{$bp}-spacer {
+        margin-bottom: $unit * 3;
+    }
+    &.no-spacer-#{$bp} {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Resets
+-----------------------------------*/
+
+//makes content section same width as postscript/footer
+.node-type-bp3 #zone-content,
+.node-type-bp3 #region-content {
+    @include bp-min-m {
+        width: 720px;
+    }
+    @include bp-min-l {
+        width: 960px;
+    }
+}
+
+//fixes box-sizing margin/padding issue with full width omega grid
+.node-type-bp3 .grid-12 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.region-content .region-inner {
+    @include bp-max-s {
+        padding: 0;
+    }
+}

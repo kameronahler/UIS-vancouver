@@ -1,0 +1,74 @@
+/* @override http://wearemaui.dev.engagingplans.org/sites/wearemaui.dev.engagingplans.org/files/css_injector/css_injector_1.css?ot06j5 */
+
+/* ================================
+
+Engaging Plans Styling Boilerplate
+
+==================================*/
+/* -----------------
+Mixins and Vars
+----------------- */
+@import "partials/ep-mixins";
+@import "partials/vars";
+
+
+
+/* -----------------
+Momentum scrolling not working on touch devices
+----------------- */
+@import "partials/ep/momentum-scrolling/momentum-scrolling";
+
+
+
+/* -----------------
+Accessibility Concerns
+-----------------*/
+// Font scaling
+// @import "partials/ep/fonts/global";
+// @import "partials/ep/fonts/participate";
+// @import "partials/ep/fonts/events";
+// @import "partials/ep/fonts/contact";
+// @import "partials/ep/fonts/open-question";
+
+// AA Color Contrast
+// @import "partials/ep/colors/global";
+
+
+
+/* -----------------
+Brightpages 3.0
+-----------------*/
+// @import "partials/ep/bp3/_01-base";
+// @import "partials/ep/bp3/_02-layout";
+// @import "partials/ep/bp3/_04-state";
+// @import "partials/ep/bp3/_05-theme";
+
+// this has styles for bundles from DOLA but is left out by default
+// @import "partials/ep/bp3/_03-modules";
+
+
+
+/* -------------------
+Webform Page Styling
+---------------------- */
+// @import "partials/ep/webforms/webforms";
+
+
+
+/* ----------------------------
+Webforms With Grid Questions
+------------------------------- */
+/* Fix for grid question type styling - especially mobile */
+// @import "partials/ep/grid-questions/grid-questions";
+
+
+
+/* ================================
+
+Project Specific
+
+==================================*/
+@import "partials/keyframes";
+@import "partials/existing";
+@import "partials/timeline";
+@import "partials/timeline-interactivity";

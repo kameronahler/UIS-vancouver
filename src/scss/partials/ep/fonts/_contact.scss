@@ -1,0 +1,7 @@
+.node-links ul li a, .comment-links ul li a{
+	@include font(12)
+}
+
+.node-type-webform h1#page-title{
+	@include font(18)
+}

@@ -1,0 +1,141 @@
+//mixins
+@mixin bp($bp) {
+    // 480
+    @if $bp=='xs' {
+        @media screen and (min-width: 30em) {
+            @content
+        }
+    }
+
+    // 740
+    @elseif $bp=='md' {
+        @media screen and (min-width: 46.25em) {
+            @content
+        }
+    }
+
+    // 980
+    @elseif $bp=='lg' {
+        @media screen and (min-width: 61.25em) {
+            @content
+        }
+    }
+
+    @elseif $bp=='max-xs' {
+        @media screen and (max-width: 29.99em) {
+            @content
+        }
+    }
+    @elseif $bp=='max-md' {
+        @media screen and (max-width: 46.24em) {
+            @content
+        }
+    }
+    @elseif $bp=='max-lg' {
+        @media screen and (max-width: 61.24em) {
+            @content
+        }
+    }
+}
+
+// no cascade
+@mixin reset-box-sizing {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+// no cascade
+@mixin reset-box-sizing-all {
+    box-sizing: border-box;
+
+    &::before,
+    &::after,
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+}
+
+@mixin flex($justify-content:null, $align-items:null, $align-content:null) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+}
+
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absolute ($top:null, $left:null, $right:null, $bottom:null) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    @content;
+}
+
+@mixin hide{
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px); /* deprecated */
+    clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+// required for ep accessibility partials
+@mixin font($px){
+    font-size:#{($px / 16)}rem;
+}
+
+@mixin font-family{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+@mixin button{
+    display:inline-block;
+    background-color:$color-2;
+    color:#fff;
+    text-decoration:none;
+    padding:1em 1.5em;
+    border-radius:4px;
+}
+
+// hover
+@mixin timelineitemhoverinteraction($item,$percent,$color){
+    &--#{$item}{
+        &:hover{
+            & ~ .timeline-4up__decoration-bg{
+                transform:scaleX($percent) !important;
+                background:linear-gradient(90deg, rgba($color,.75), rgba($color,.95)) !important;
+            }
+        }
+    }
+}     
+
+// active
+@mixin timelineitemactiveinteraction($item,$percent,$color){
+    &--#{$item}{
+        &.js-active{
+            & ~ .timeline-4up__decoration-bg{
+                width:25% * $percent;
+                background:linear-gradient(90deg, rgba($color,.75), rgba($color,.95));
+            }
+        }
+    }
+}           

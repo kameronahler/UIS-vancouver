@@ -1,0 +1,221 @@
+ #zone-postscript,
+ #zone-footer{
+ 	background: #0279B1;
+ 	color: #fff;
+}
+
+
+/* =================================
+
+CHANGEABLE VARIABLES FOR SITE COLORS
+
+CHANGES TO THIS PEN DO NOT SAVE, EVERY TIME YOU ACCESS THIS GENERATOR THEY NEED TO BE FILLED OUT AGAIN
+
+====================================*/
+/* ---------------------------------------------
+Required -- you should change at least these two
+------------------------------------------------*/
+/* ------------------------------------------------------
+Optional -- changing these variables is not as noticeable
+---------------------------------------------------------*/
+/* ---------------------------------------------
+Leave these alone -- they change on their own based on the variables above
+------------------------------------------------*/
+/* =================================
+
+SCSS STYLING BELOW -- DON'T CHANGE
+
+====================================*/
+/* --------------------------------
+top nav
+----------------------------------*/
+#block-system-main-menu ul li a {
+  color: #0279B1;
+}
+
+@media all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation: landscape) {
+  .region-header-second-inner #block-system-main-menu ul li a.active:hover {
+    cursor: pointer;
+  }
+
+  .region-header-second-inner #block-system-main-menu ul li ul a.active:hover {
+    color: #0279B1;
+  }
+}
+/* --------------------------------
+headings
+----------------------------------*/
+h1,
+h1.site-name,
+h2.site-name {
+  color: #0279B1;
+}
+
+h2.block-title {
+  color: #026898;
+}
+
+/* --------------------------------
+global links
+----------------------------------*/
+a,
+.view-id-events h2 a,
+h2.site-name a,
+.view-faq .attachment ul li a.active {
+  color: #0279B1;
+}
+
+/* --------------------------------
+global buttons
+----------------------------------*/
+html button,
+html input[type="reset"],
+html input[type="submit"]:not(.css-inject-edit):not(.css-inject-delete),
+html input[type="button"],
+html .comment-links ul li a,
+html .button,
+html .field-name-field-document:not(#edit-field-document),
+.view-documents .views-field-view-node a,
+.view-documents.view-display-id-page span.field-content.button a,
+.view-documents.view-display-id-page span.file a {
+  background-color: #B2B2B2;
+  font-weight: normal;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+html button:hover,
+html input[type="reset"]:hover,
+html input[type="submit"]:not(.css-inject-edit):not(.css-inject-delete):hover,
+html input[type="button"]:hover,
+html .comment-links ul li a:hover,
+html .button:hover,
+html .field-name-field-document:not(#edit-field-document):hover,
+.view-documents .views-field-view-node a:hover,
+.view-documents.view-display-id-page span.field-content.button a:hover,
+.view-documents.view-display-id-page span.file a:hover {
+  background-color: #a5a5a5;
+}
+
+/* --------------------------------
+homepage timeline
+----------------------------------*/
+.mason-timeline .jcarousel-header,
+.mason-timeline .jcarousel-footer,
+.slider-outter {
+  background-color: #0279B1;
+}
+
+.event-phase .eventcon {
+  background-color: #485052;
+}
+
+.event-event .eventcon {
+  background-color: #606a6d;
+}
+
+/* --------------------------------
+documents
+----------------------------------*/
+form#views-exposed-form-documents-page .views-exposed-widgets input#edit-submit-documents {
+  background: #B2B2B2;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+form#views-exposed-form-documents-page .views-exposed-widgets input#edit-submit-documents:hover {
+  background-color: #a5a5a5;
+}
+
+/* --------------------------------
+events
+----------------------------------*/
+#zone-content .view-events .views-field-field-start-date,
+#zone-content .node-event .field-name-field-start-date,
+.node-type-book .dd-quote p {
+  color: #01577f;
+}
+
+/* --------------------------------
+participate
+----------------------------------*/
+.node-type-poll .title-background,
+.node-type-open-question .title-background,
+.node-type-webform .title-background,
+.node-type-bold-ideas .title-background,
+.view-participate .views-field-title,
+.view-participate h2.node-title,
+.view-participate .views-field-field-participate-icon,
+.node-type-document .document-feedback-block h2.block-title {
+  background-color: #0279B1;
+}
+
+.view-participate .views-field-body .field-content {
+  color: #026898;
+}
+
+.share-links .comment-add > a {
+  font-weight: 400;
+  background-color: #B2B2B2;
+}
+
+.view-participate .views-field-view-node a,
+article.comment .links-rate .comment-reply a,
+article.comment .links-rate .comment-delete a,
+article.comment .links-rate .comment-edit a {
+  background-color: #B2B2B2;
+}
+
+article.comment .rate-widget ul li .percent {
+  color: #fff;
+}
+
+article.comment .rate-widget ul li {
+  background-color: #0279B1 !important;
+}
+
+article.comment .submitted-links-rate .date {
+  color: #01577f;
+}
+
+/* --------------------------------
+postscript
+----------------------------------*/
+#zone-postscript a {
+  color: #a2ccde;
+}
+#zone-postscript .goog-te-menu-value {
+  color: inherit;
+}
+#zone-postscript .block h2.block-title {
+  color: #fff;
+}
+
+/* --------------------------------
+project updates
+----------------------------------*/
+.region-content .view-news .views-field-view-node a {
+  background-color: #B2B2B2;
+}
+
+.region-content .view-news .views-field-title a,
+.page-news .region-content h1.title {
+  color: #0279B1;
+}
+
+/* --------------------------------
+footer
+----------------------------------*/
+#zone-footer {
+  color: #f0f0f0;
+}
+#zone-footer a {
+  color: #e6f1f6;
+}
+
+#block-menu-menu-footer-menu ul li {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+#block-menu-menu-footer-menu ul li a {
+  color: #e6f1f6;
+}

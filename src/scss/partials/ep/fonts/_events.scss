@@ -1,0 +1,7 @@
+h3 a, h2 a{
+	@include font(17)
+}
+
+.view-events .views-field-field-start-date, .node-event .field-name-field-start-date{
+	@include font(12)
+}

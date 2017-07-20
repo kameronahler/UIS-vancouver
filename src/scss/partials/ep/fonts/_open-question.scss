@@ -1,0 +1,13 @@
+article.comment .submitted-links-rate .user{
+	@include font(12)
+}
+
+article.comment .submitted-links-rate .date{
+	@include font(11)
+}
+
+// wysiwyg tips
+.tips,
+.description{
+	@include font(10)
+}

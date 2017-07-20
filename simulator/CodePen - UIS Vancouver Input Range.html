@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://s.codepen.io/kamtr0n/debug/de3bd11186b529a698494ed939dc0ca5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <meta name="robots" content="noindex">
+  <title>CodePen - UIS Vancouver Input Range</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="./CodePen - UIS Vancouver Input Range_files/normalize.min.css">
+
+  
+      <style>
+      html {
+  box-sizing: border-box;
+}
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+div {
+  padding-bottom: 116px;
+}
+
+.sim-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #2979ff;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  z-index: 99;
+}
+.sim-input::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 -4px 16px -6px rgba(0, 0, 0, 0.17);
+}
+.sim-input__input-wrapper {
+  position: relative;
+  margin-left: 2rem;
+  z-index: 100;
+}
+.sim-input__input-wrapper output {
+  display: block;
+  text-align: center;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.row__header {
+  width: 100%;
+  color: #2979ff;
+  text-align: center;
+}
+
+.sim {
+  width: 50%;
+  position: relative;
+}
+.sim__header h3 {
+  display: block;
+  position: relative;
+  width: 50%;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+.sim__tooltip-trigger {
+  border-bottom: 1px dotted #2979ff;
+  position: relative;
+}
+.sim__tooltip-trigger:hover {
+  cursor: help;
+}
+.sim__tooltip-trigger:hover ~ .sim__tooltip {
+  opacity: 1;
+  -webkit-transform: translate3d(-50%, calc(100% - 1em), 0);
+          transform: translate3d(-50%, calc(100% - 1em), 0);
+  -webkit-transition: .5s ease-out .1s;
+  transition: .5s ease-out .1s;
+}
+.sim__tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: -2em;
+  display: block;
+  width: 100%;
+  -webkit-transform: translate3d(-50%, 100%, 0);
+          transform: translate3d(-50%, 100%, 0);
+  padding: 1rem;
+  background: #2979ff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  opacity: 0;
+  color: #fff;
+  box-shadow: 0 4px 15px -4px rgba(0, 0, 0, 0.17);
+  z-index: 99;
+}
+.sim__tooltip::before {
+  position: absolute;
+  top: -0.5em;
+  left: calc(50% - .5em);
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: #2979ff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.sim__icon {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 100px;
+  max-width: 100%;
+}
+.sim__data {
+  display: block;
+  text-align: center;
+}
+.sim--graph {
+  width: 100%;
+}
+
+.sim-graph {
+  width: 100%;
+  margin: 0;
+}
+.sim-graph__bar {
+  position: relative;
+  display: block;
+  height: 2em;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  z-index: 2;
+}
+.sim-graph__bar--total {
+  background: #b71c1c;
+}
+.sim-graph__bar--renewable {
+  background: green;
+}
+.sim-graph section {
+  padding: 0 12.5%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.sim-graph section::before {
+  position: absolute;
+  left: 12.5%;
+  bottom: 0;
+  content: "";
+  width: 75%;
+  height: 2em;
+  z-index: 1;
+  background: #fafafa;
+  z-index: 1;
+}
+
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" cz-shortcut-listen="true">
+
+  <div>
+	<header id="simInput" class="sim-input">
+		<h2>Compare the Plan Over the Years: </h2>
+		<section class="sim-input__input-wrapper">
+			<output class="yearOutput" name="yearOutput" id="yearOutput">2015</output>
+			<input name="yearInput" list="tickmarks" id="yearInput" type="range" value="2015" min="2015" max="2050" step="5" oninput="yearChange()">
+			<datalist id="tickmarks">
+			  <option value="2015">
+			  </option><option value="2020">
+			  </option><option value="2025">
+			  </option><option value="2030">
+			  </option><option value="2035">
+			  </option><option value="2040">
+			  </option><option value="2045">
+			  </option><option value="2050">
+			</option></datalist>
+		</section>
+	</header>
+	
+	<section class="row">
+		<header class="row__header">
+			<h2>Overarching Section</h2>
+		</header>
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">Population</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataPopulation">626,193</span>
+		</section>			
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">Carbon Pollution Reduction (Compared to 2007)</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataCarbon">15%</span>
+		</section>
+		<section class="sim sim--graph">
+			<figure class="sim-graph">
+				<section>
+					<header class="sim__header">
+						<h3><span class="sim__tooltip-trigger">Total Energy Use Per Capita</span><span class="sim__tooltip">This is a tooltip</span></h3>
+						<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+					</header>
+					<span class="sim__data" id="dataTotal">82</span>
+					<span class="sim-graph__bar sim-graph__bar--total" style="width: 100%; will-change: auto; background: rgb(183, 28, 28);" role="presentation" id="dataTotalBar"></span>
+				</section>
+				<section>
+					<header class="sim__header">
+						<h3><span class="sim__tooltip-trigger">Renewable Energy</span><span class="sim__tooltip">This is a tooltip</span></h3>
+						<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+					</header>
+					<span class="sim__data" id="dataRenewable">35%</span>
+					<span class="sim-graph__bar sim-graph__bar--renewable" style="width: 35%; will-change: auto; background: rgb(220, 237, 200);" role="presentation" id="dataRenewableBar"></span>
+				</section>
+			</figure>	
+		</section>
+	</section>
+	
+	<section class="row">
+		<header class="row__header">
+			<h2>Buildings Section</h2>
+		</header>
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">% of New Buildings Built to Zero Emission Standard</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataNew">0%</span>
+		</section>
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">% of Existing Buildings Retrofitted</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataExisting">2%</span>
+		</section>
+	</section>
+	
+	<section class="row">
+		<header class="row__header">
+			<h2>Transportation Section</h2>
+		</header>
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">Number of Electric Vehicles</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataElectric">1,000</span>
+		</section>
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">Mode Share Split</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataMode">50%</span>
+		</section>
+	</section>
+	
+	<section class="row">
+		<header class="row__header">
+			<h2>Cost Section</h2>
+		</header>
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">Energy Cost Per Capita (Residential Energy and Passenger Vehicle Fuel)</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataEnergy">1,216</span>
+		</section>
+		<section class="sim">
+			<header class="sim__header">
+				<h3><span class="sim__tooltip-trigger">Carbon Cost Per Capita</span><span class="sim__tooltip">This is a tooltip</span></h3>
+				<img class="sim__icon" role="presentation" src="./CodePen - UIS Vancouver Input Range_files/200x200" alt="">
+			</header>
+			<span class="sim__data" id="dataCapita">53</span>
+		</section>
+	</section>
+	
+</div>
+  
+  
+    <script>
+    var yearActive = 2015,
+	yearInput = document.querySelector('#yearInput'),
+	yearOutput = document.querySelector('#yearOutput'),
+	dataPopulation = document.querySelector('#dataPopulation'),
+	dataTotal = document.querySelector('#dataTotal'),
+	dataTotalBar = document.querySelector('#dataTotalBar'),
+	dataRenewable = document.querySelector('#dataRenewable'),
+	dataRenewableBar = document.querySelector('#dataRenewableBar'),
+	dataNew = document.querySelector('#dataNew'),
+	dataExisting = document.querySelector('#dataExisting'),
+	dataElectric = document.querySelector('#dataElectric'),
+	dataMode = document.querySelector('#dataMode'),
+	dataEnergy = document.querySelector('#dataEnergy'),
+	dataCarbon = document.querySelector('#dataCarbon');
+
+function inputMouseOver(){
+	dataRenewableBar.style.willChange = "width,background";
+	dataTotalBar.style.willChange = "width,background";
+}
+
+function inputMouseOut(){
+	dataRenewableBar.style.willChange = "auto";
+	dataTotalBar.style.willChange = "auto";
+}
+
+function yearChange(){
+	yearActive = yearInput.value;
+	yearOutput.value = yearActive;
+	
+	// 2015
+	if (yearActive === "2015") {
+		dataPopulation.textContent = "626,193";
+		dataTotal.textContent = "82";
+		dataRenewable.textContent = "35%";
+		dataTotalBar.style.width = 100 + "%";
+		dataTotalBar.style.background = "#b71c1c";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#dcedc8";
+		dataCarbon.textContent = "15%";
+		dataNew.textContent = "0%";
+		dataExisting.textContent = "2%";
+		dataElectric.textContent = "1,000";
+		dataMode.textContent = "50%";
+		dataEnergy.textContent = "1,216";
+		dataCapita.textContent = "53";
+	} 
+	
+	// 2020
+	else if (yearActive === "2020"){
+		dataPopulation.textContent = "656,986";
+		dataTotal.textContent = "75";
+		dataRenewable.textContent = "40%";
+		dataTotalBar.style.width = 100 - (12.5 * 1) + "%";
+		dataTotalBar.style.background = "#c62828";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#c5e1a5";
+		dataCarbon.textContent = "25%";
+		dataNew.textContent = "70%";
+		dataExisting.textContent = "20%";
+		dataElectric.textContent = "10,000";
+		dataMode.textContent = "58%";
+		dataEnergy.textContent = "1,192";
+		dataCapita.textContent = "46";
+	}
+	
+	// 2025
+	else if (yearActive === "2025"){
+		dataPopulation.textContent = "688,403";
+		dataTotal.textContent = "69";
+		dataRenewable.textContent = "45%";
+		dataTotalBar.style.width = 100 - (12.5 * 2) + "%";
+		dataTotalBar.style.background = "#d32f2f";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#aed581";
+		dataCarbon.textContent = "30%";
+		dataNew.textContent = "90%";
+		dataExisting.textContent = "35%";
+		dataElectric.textContent = "20,000";
+		dataMode.textContent = "62%";
+		dataEnergy.textContent = "1,187";
+		dataCapita.textContent = "40";
+	}
+	
+	// 2030
+	else if (yearActive === "2030"){
+		dataPopulation.textContent = "718,267";
+		dataTotal.textContent = "66";
+		dataRenewable.textContent = "50%";
+		dataTotalBar.style.width = 100 - (12.5 * 3) + "%";
+		dataTotalBar.style.background = "#e53935";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#9ccc65";
+		dataCarbon.textContent = "35%";
+		dataNew.textContent = "100%";
+		dataExisting.textContent = "50%";
+		dataElectric.textContent = "30,000";
+		dataMode.textContent = "65%";
+		dataEnergy.textContent = "1,176";
+		dataCapita.textContent = "36";
+	}
+	
+	// 2035
+	else if (yearActive === "2035"){
+		dataPopulation.textContent = "744,375";
+		dataTotal.textContent = "63";
+		dataRenewable.textContent = "55%";
+		dataTotalBar.style.width = 100 - (12.5 * 4) + "%";
+		dataTotalBar.style.background = "#f44336";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#8bc34a";
+		dataCarbon.textContent = "45%";
+		dataNew.textContent = "100%";
+		dataExisting.textContent = "60%";
+		dataElectric.textContent = "50,000";
+		dataMode.textContent = "66%";
+		dataEnergy.textContent = "1,179";
+		dataCapita.textContent = "34";
+	}
+	
+	// 2040
+	else if (yearActive === "2040"){
+		dataPopulation.textContent = "766,629";
+		dataTotal.textContent = "61";
+		dataRenewable.textContent = "60%";
+		dataTotalBar.style.width = 100 - (12.5 * 5) + "%";
+		dataTotalBar.style.background = "#ef5350";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#7cb342";
+		dataCarbon.textContent = "50%";
+		dataNew.textContent = "100%";
+		dataExisting.textContent = "70%";
+		dataElectric.textContent = "80,000";
+		dataMode.textContent = "67%";
+		dataEnergy.textContent = "1,161";
+		dataCapita.textContent = "32";
+	}
+
+	// 2045
+	else if (yearActive === "2045"){
+		dataPopulation.textContent = "786,975";
+		dataTotal.textContent = "58";
+		dataRenewable.textContent = "80%";
+		dataTotalBar.style.width = 100 - (12.5 * 6) + "%";
+		dataTotalBar.style.background = "#e57373";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#689f38";
+		dataCarbon.textContent = "60%";
+		dataNew.textContent = "100%";
+		dataExisting.textContent = "80%";
+		dataElectric.textContent = "100,000";
+		dataMode.textContent = "68%";
+		dataEnergy.textContent = "1,121";
+		dataCapita.textContent = "29";
+	}
+
+	// 2050
+	else if (yearActive === "2050"){
+		dataPopulation.textContent = "807,861";
+		dataTotal.textContent = "56";
+		dataRenewable.textContent = "100%";
+		dataTotalBar.style.width = 100 - (12.5 * 7) + "%";
+		dataTotalBar.style.background = "#558b2f";		
+		dataRenewableBar.style.width = dataRenewable.textContent;
+		dataRenewableBar.style.background = "#558b2f";
+		dataCarbon.textContent = "80%";
+		dataNew.textContent = "100%";
+		dataExisting.textContent = "100%";
+		dataElectric.textContent = "150,000";
+		dataMode.textContent = "70%";
+		dataEnergy.textContent = "1,102";
+		dataCapita.textContent = "27";
+	}
+}
+
+yearInput.addEventListener('mouseover',inputMouseOver);
+yearInput.addEventListener('mouseout',inputMouseOut);
+  </script>
+
+  
+  
+
+
+
+ </body></html>

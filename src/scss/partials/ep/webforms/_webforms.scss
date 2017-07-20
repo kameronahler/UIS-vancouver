@@ -1,0 +1,23 @@
+// fix participate icon from overlapping h1 titles on mobile
+.node-type-webform article .field-name-field-participate-icon{
+	max-width:70px;
+	top:50%;
+	bottom:initial;
+	@include bp(md){
+		max-width:100%;
+		top:initial;
+		bottom:-50px;
+	}
+}
+
+// this fixes text/email/and password overflow because of the html size attribute on the inputs
+// this can be used on any form to fix this, but this fix is scoped to webforms
+// control the width of it's wrapper if you don't want it full width
+.webform-client-form{
+	input[type="password"],
+	input[type="text"],
+	input[type="email"]{
+		width:100%;
+	}	
+}
+

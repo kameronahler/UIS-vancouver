@@ -1,0 +1,250 @@
+/* ================================
+
+Timeline
+
+==================================*/
+
+/*---------------------------------
+Container
+----------------------------------*/
+.sim-container {
+	box-sizing: border-box;
+	&::before, &::after, *, *::before, *::after {
+		box-sizing: inherit;
+	}
+	padding-bottom: 116px;
+}
+
+
+/*---------------------------------
+Sticky input bar
+----------------------------------*/
+.sim-input {
+	@include flex(center,center);
+	background: $color-1;
+	color: #fff;
+	width: 100%;
+	position: fixed;
+	padding: 1em;
+	left: 0;
+	bottom: 0;
+	height: 100px;
+	z-index: 9999999;
+	& .admin-menu {
+		display: none;
+	}
+
+	&::after {
+		@include absolute(0,0);
+		z-index: 0;
+		content: "";
+		width: 100%;
+		height: 100%;
+		box-shadow: 0 -4px 16px -6px rgba(black, .17);
+	}
+
+	&__input-wrapper {
+		position: relative;
+		margin-left: 2rem;
+		z-index: 998;
+
+		output {
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+/*---------------------------------
+Row
+----------------------------------*/
+.row {
+	@include flex();
+	flex-wrap: wrap;
+}
+
+// header
+.row__header {
+	width: 100%;
+	text-align: center;
+	color: #333;
+}
+
+
+// individual sections
+.sim {
+
+	// 100% for xs
+	width: 100%;
+	padding: 2em;
+	position: relative;
+	text-align: center;
+	
+	@include bp(md) {
+		width: 50%;
+	}
+	
+	// for top section that isn't 50/50
+	&--33 {
+		@include bp(md) {
+			width: 33.33334%;
+		}
+	}
+	
+	// for bus overflow
+	&--nooverflow {
+		overflow: hidden;
+	}
+	
+
+	// section title
+	&__header {
+		h3 {
+			display: inline-block;
+			width: 80%;
+			position: relative;
+			margin: 0 auto 1rem;
+			text-align: center;
+			color: #333;
+			text-shadow: $text-shadow-1;
+			min-height: 46px;
+			line-height: 1.3333;
+		}
+	}
+	
+	// inline heading trigger spans
+	&__tooltip-trigger {
+		display: inline-block;
+		border-bottom: 1px dotted $color-1;
+		position: relative;
+
+		&:hover {
+			cursor: help;
+
+			&::before {
+				opacity: 1;
+				transform: translate3d(-50%, -2em, 0);
+				transition: $transition-1 ease-out .2s;
+			}
+		}
+		&.js-active {
+			&:hover {
+				cursor: pointer;
+			}
+			& ~ .sim__tooltip {
+				opacity: 1;
+				transform: translate3d(-50%, calc(100% - 1em), 0);
+				transition: .5s ease-out .2s;
+			}
+		}
+	}
+	
+	// hidden tooltips
+	&__tooltip {
+		@include absolute(null,50%,null,-2em);
+		display: block;
+		width: 100%;
+		transform: translate3d(-50%, 100%, 0);
+		padding: 1rem;
+		background: $color-1;
+		transition: .2s ease;
+		opacity: 0;
+		color: #fff;
+		font-size: 15px;
+		box-shadow: 0 4px 15px -4px rgba(black, .17);
+		z-index: 99;
+
+		&::before {
+			@include absolute(-.4em, calc(50% - .5em));
+			content: "";
+			width: 1em;
+			height: 1em;
+			background: $color-1;
+			transform: rotate(45deg);
+		}
+
+		i {
+			img {
+				width: 1em;
+				height: 1em;
+				vertical-align: top;
+				margin-right: .25em;
+			}
+		}
+	}
+
+	// figure parent wrapper
+	&__icon {
+		display: block;
+		margin: 0 auto 1rem;
+		transition: .5s ease .2s;
+	}
+
+	// data number figures
+	&__data {
+		display: inline-block;
+		padding: 10px 20px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 1.25em;
+		min-width: 113px;
+		line-height: 1;
+		margin-bottom: 1rem;
+		color: $color-1;
+		box-shadow: $box-shadow-2;
+		border-radius: 2px;
+		
+		// for figures that have the data numbers over the imagery
+		&--overlay {
+			@include absolute(48%,50%);
+			transform: translateX(-50%);
+			width: 50%;
+			box-shadow: none;
+			background: #fff;
+			box-shadow: $box-shadow-2;
+			z-index: 15;
+		}
+	}
+
+	// special rule for population figure's text color
+	// this is the only one that doesn't change from "good" to "bad"
+	#dataPopulation {
+		color: #333;
+	}
+}
+
+// graph section -- originally had a more complicated BEM because we thought it would be unique from the rest of the sim's styling
+.sim-graph {
+	margin: 0;
+	padding: 0 12.5%;
+	position: relative;
+	margin-bottom: 1rem;
+	
+	// the gray bar that is always visible beneath the data chart's bar
+	&::before {
+		border-radius: $border-radius-bar-chart;
+		@include absolute(null,12.5%,null,0);
+		content: "";
+		width: 75%;
+		height: 2em;
+		box-shadow: $box-shadow-1;
+		z-index: 3;
+	}
+	
+	// data bar that changes
+	&__bar {
+		position: relative;
+		display: block;
+		height: 2em;
+		transition: .5s ease .25s;
+		z-index: 2;
+		border-radius: $border-radius-bar-chart;
+		
+		&--total {
+			background: $color-danger;
+		}
+		&--renewable {
+			background: $color-danger;
+		}
+	}
+}

@@ -1,0 +1,243 @@
+/* --------------------------------
+vars explained
+----------------------------------*/
+// main nav text color, homepage timeline header and footer background color, individual page h1s, banner background colors, participate card header background colors
+$color-primary: #2b76af;
+
+// button colors – intended for white text
+$color-secondary: #53822f;
+
+// block title colors for homepage and sidebars – need to be darker because they are on a gray background
+$color-home-block-h2: darken($color-primary,5%);
+
+// homepage and events page timeline icon color
+$color-timeline-icon-bg: #485052;
+
+// event page
+$color-events-time:darken($color-primary,10%);
+
+// postscript area More links
+$color-postscript-link:#a2ccde;
+
+// footer area links
+$color-footer-link:#e6f1f6;
+
+// footer area text (non-links)
+$color-footer-body:#f0f0f0; // non-links in footer - bg #686e70
+
+
+/* --------------------------------
+top nav
+----------------------------------*/
+#block-system-main-menu ul li a {
+    color: $color-primary;
+}
+
+@media all and (min-width:740px) and (min-device-width:740px),
+(max-device-width:800px) and (min-width:740px) and (orientation:landscape) {
+    // need region-header-second-inner for higher specificity because of stylesheet loading order
+    .region-header-second-inner #block-system-main-menu ul li a.active {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .region-header-second-inner #block-system-main-menu ul li ul a.active:hover {
+        color: $color-primary;
+    }
+}
+
+
+/* --------------------------------
+headings
+----------------------------------*/
+h1,
+h1.site-name,
+h2.site-name{
+    color: $color-primary;
+}
+h2.block-title {
+    color: $color-home-block-h2;
+}
+
+
+
+/* --------------------------------
+global links
+----------------------------------*/
+a,
+.view-id-events h2 a,
+h2.site-name a,
+.view-faq .attachment ul li a.active {
+    color: $color-primary;
+}
+
+
+/* --------------------------------
+global buttons
+----------------------------------*/
+html button,
+html input[type="reset"],
+html input[type="submit"]:not(.css-inject-edit):not(.css-inject-delete),
+html input[type="button"],
+html .comment-links ul li a,
+html .button,
+html .field-name-field-document:not(#edit-field-document),
+.view-documents .views-field-view-node a,
+.view-documents.view-display-id-page span.field-content.button a,
+.view-documents.view-display-id-page span.file a{
+    background-color: $color-secondary;
+    font-weight: normal;
+    transition: background-color .3s ease-out;
+    &:hover {
+        background-color: darken($color-secondary, 5%);
+    }
+}
+
+
+/* --------------------------------
+homepage timeline
+----------------------------------*/
+
+.mason-timeline .jcarousel-header,
+.mason-timeline .jcarousel-footer,
+.slider-outter {
+    background-color: $color-primary;
+}
+
+// darker colored icon circle
+.event-phase .eventcon {
+    background-color: $color-timeline-icon-bg;
+}
+
+// lighter colored icon circle
+.event-event .eventcon {
+    background-color: lighten($color-timeline-icon-bg, 10%);
+}
+
+/* --------------------------------
+documents
+----------------------------------*/
+// apply button
+form#views-exposed-form-documents-page .views-exposed-widgets input#edit-submit-documents{
+    background:$color-secondary;
+    transition: background-color .3s ease-out;
+        &:hover {
+        background-color: darken($color-secondary, 5%);
+    }
+}
+
+
+
+/* --------------------------------
+events
+----------------------------------*/
+
+#zone-content .view-events .views-field-field-start-date,
+#zone-content .node-event .field-name-field-start-date,
+.node-type-book .dd-quote p {
+    color: $color-events-time;
+}
+
+
+/* --------------------------------
+participate
+----------------------------------*/
+
+.node-type-poll .title-background,
+.node-type-open-question .title-background,
+.node-type-webform .title-background,
+.node-type-bold-ideas .title-background,
+.view-participate .views-field-title,
+.view-participate h2.node-title,
+.view-participate .views-field-field-participate-icon,
+.node-type-document .document-feedback-block h2.block-title {
+    background-color: $color-primary;
+}
+
+// question
+.view-participate .views-field-body .field-content {
+    color: $color-home-block-h2;
+}
+
+// buttons
+.share-links .comment-add > a{
+    font-weight:400;
+    background-color:$color-secondary;
+}
+
+.view-participate .views-field-view-node a,
+article.comment .links-rate .comment-reply a,
+article.comment .links-rate .comment-delete a,
+article.comment .links-rate .comment-edit a {
+    background-color: $color-secondary
+}
+
+article.comment .rate-widget ul li .percent{
+    color:#fff;
+}
+
+//important :((((((((((
+article.comment .rate-widget ul li{
+    background-color: $color-primary !important;
+}
+
+// timestamp
+article.comment .submitted-links-rate .date{
+    color:$color-events-time;
+}
+
+/* --------------------------------
+postscript
+----------------------------------*/
+
+#zone-postscript {
+    a {
+        color: $color-postscript-link;
+    }
+    // reset google translate
+    .goog-te-menu-value {
+        color: inherit;
+    }
+    // headings
+    .block h2.block-title {
+        color: #fff;
+    }
+}
+
+/* --------------------------------
+project updates
+----------------------------------*/
+// button
+.region-content .view-news .views-field-view-node a{
+    background-color:$color-secondary;
+}
+
+.region-content .view-news .views-field-title a,
+.page-news .region-content h1.title{
+    color:$color-primary
+}
+
+/* --------------------------------
+footer
+----------------------------------*/
+
+#zone-footer {
+    // footer non-links
+    color: $color-footer-body;
+    // footer links
+    a {
+        color: $color-footer-link;
+    }
+}
+
+// top portion of footer - requires higher specificity
+#block-menu-menu-footer-menu ul li {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+#block-menu-menu-footer-menu ul li a {
+    color: $color-footer-link;
+}
+
+

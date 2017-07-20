@@ -1,0 +1,8 @@
+@keyframes rotate {
+	0% {
+		transform: translateZ(0) rotate(0);
+	}
+	100% {
+		transform: translateZ(0) rotate(360deg);
+	}
+}
