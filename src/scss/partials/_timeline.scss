@@ -3,7 +3,18 @@
 Timeline
 
 ==================================*/
+.page-node-18{
+	#launcher{
+		display:none;
+	}
 
+
+	.nav-scrolling{
+		.zone-header-wrapper{
+			box-shadow:none;
+		}	
+	}
+}
 /*---------------------------------
 Container
 ----------------------------------*/
@@ -21,15 +32,26 @@ Sticky input bar
 ----------------------------------*/
 .sim-input {
 	@include flex(center,center);
-	background: linear-gradient(10deg, $color-1, lighten($color-1,5%));
+	background: $color-2;
 	color: #fff;
 	width: 100%;
 	position: fixed;
 	padding: 1em;
 	left: 0;
-	bottom: 0;
-	height: 100px;
-	z-index: 9999999;
+	bottom:0;
+	min-height:100pxi;
+	height: 75pxi;
+	z-index: 14;
+
+	@include bp(md){
+		bottom:0;
+		top: 70pxi;
+		min-height: 82pxi;
+	}
+	@include bp(lg){
+		top: 60pxi;
+		padding-top:40pxi;
+	}
 
 	html.overlay-open & {
 		display: none;
@@ -46,7 +68,7 @@ Sticky input bar
 
 	&__input-wrapper {
 		position: relative;
-		margin-left: 2rem;
+		margin-left: 1rem;
 		z-index: 998;
 		text-shadow:$text-shadow-1;
 
@@ -55,7 +77,13 @@ Sticky input bar
 			text-align: center;
 			font-size:16px;
 			font-weight:bold;
-
+			
+			@include bp(lg){
+				display:block;
+				float:right;
+				margin-left:1em;
+				line-height:1;
+			}
 		}
 	}
 }
@@ -66,12 +94,14 @@ Row
 .row {
 	@include flex();
 	flex-wrap: wrap;
-	margin-bottom:2rem;
+	margin-bottom:3rem;
 }
 
 // header
 .row__header {
-	width: 100%;
+	width: 80%;
+	margin-left:auto;
+	margin-right:auto;
 	text-align: center;
 	padding:1em;
 	border-radius:2px;
@@ -94,6 +124,7 @@ Row
 		}
 	}
 	.button{
+		font-size:16px;
 		margin-bottom:16px * 2;
 		background:$color-2
 	}
@@ -106,12 +137,15 @@ Row
 
 	// 100% for xs
 	width: 100%;
-	padding: 2em;
+	padding: 1em;
 	position: relative;
 	text-align: center;
 	
 	@include bp(md) {
 		width: 50%;
+	}
+	@include bp(lg) {
+		padding:1.5em;
 	}
 	
 	// for top section that isn't 50/50
@@ -129,6 +163,8 @@ Row
 
 	// section title
 	&__header {
+		z-index:3;
+
 		h3 {
 			display: inline-block;
 			width: 80%;
@@ -139,12 +175,14 @@ Row
 			text-shadow: $text-shadow-1;
 			min-height: 46px;
 			line-height: 1.3333;
+			font-size:16px;
+			z-index:3;
 		}
 	}
 	
 	// inline heading trigger spans
 	&__tooltip-trigger {
-		display: inline-block;
+		display: inline;
 		border-bottom: 1px dotted $color-1;
 		position: relative;
 
@@ -212,9 +250,11 @@ Row
 		display: block;
 		margin: 0 auto 1rem;
 		transition: .5s ease .2s;
+		position:relative;
+		z-index:1;
 
 		svg{
-			width:100%;
+			width:75%;
 			height:auto;
 		}
 	}
@@ -225,23 +265,23 @@ Row
 		padding: 10px 20px;
 		text-align: center;
 		font-weight: 700;
-		font-size: 1.25em;
+		font-size: 18px;
 		min-width: 113px;
 		line-height: 1;
 		margin-bottom: 1rem;
 		color: $color-1;
 		box-shadow: $box-shadow-2;
 		border-radius: 2px;
+		background: #fff;
 		
 		// for figures that have the data numbers over the imagery
 		&--overlay {
-			@include absolute(48%,50%);
-			transform: translateX(-50%);
+			@include absolute(45%,50%);
+			transform: translate(-50%);
 			width: 50%;
 			box-shadow: none;
-			background: #fff;
 			box-shadow: $box-shadow-2;
-			z-index: 15;
+			z-index: 3;
 		}
 	}
 
@@ -263,11 +303,12 @@ Row
 	&::before {
 		border-radius: $border-radius-bar-chart;
 		@include absolute(null,12.5%,null,0);
+		background:#fff;
 		content: "";
 		width: 75%;
 		height: 2em;
 		box-shadow: $box-shadow-1;
-		z-index: 3;
+		z-index: 2;
 	}
 	
 	// data bar that changes
@@ -276,7 +317,7 @@ Row
 		display: block;
 		height: 2em;
 		transition: .5s ease .25s;
-		z-index: 2;
+		z-index: 3;
 		border-radius: $border-radius-bar-chart;
 		
 		&--total {

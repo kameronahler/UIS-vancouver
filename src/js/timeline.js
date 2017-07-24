@@ -37,6 +37,7 @@ function inputMouseOut(){
 
 function yearChange(){
 	yearActive = yearInput.value;
+	yearOutput.textContent = yearActive;
 	yearOutput.value = yearActive;
 	
 	// 2015
@@ -55,7 +56,6 @@ function yearChange(){
 		dataElectric.textContent = "1,000";
 		dataMode.textContent = "50%";
 		dataEnergy.textContent = "$1,216";
-		dataCapita.textContent = "53";
 	} 
 	
 	// 2020
@@ -74,7 +74,6 @@ function yearChange(){
 		dataElectric.textContent = "10,000";
 		dataMode.textContent = "58%";
 		dataEnergy.textContent = "$1,192";
-		dataCapita.textContent = "46";
 	}
 	
 	// 2025
@@ -93,7 +92,6 @@ function yearChange(){
 		dataElectric.textContent = "20,000";
 		dataMode.textContent = "62%";
 		dataEnergy.textContent = "$1,187";
-		dataCapita.textContent = "40";
 	}
 	
 	// 2030
@@ -112,7 +110,6 @@ function yearChange(){
 		dataElectric.textContent = "30,000";
 		dataMode.textContent = "65%";
 		dataEnergy.textContent = "$1,176";
-		dataCapita.textContent = "36";
 	}
 	
 	// 2035
@@ -131,7 +128,6 @@ function yearChange(){
 		dataElectric.textContent = "50,000";
 		dataMode.textContent = "66%";
 		dataEnergy.textContent = "$1,179";
-		dataCapita.textContent = "34";
 	}
 	
 	// 2040
@@ -150,7 +146,6 @@ function yearChange(){
 		dataElectric.textContent = "80,000";
 		dataMode.textContent = "67%";
 		dataEnergy.textContent = "$1,161";
-		dataCapita.textContent = "32";
 	}
 
 	// 2045
@@ -169,7 +164,6 @@ function yearChange(){
 		dataElectric.textContent = "100,000";
 		dataMode.textContent = "68%";
 		dataEnergy.textContent = "$1,121";
-		dataCapita.textContent = "29";
 	}
 
 	// 2050
@@ -188,7 +182,6 @@ function yearChange(){
 		dataElectric.textContent = "150,000";
 		dataMode.textContent = "70%";
 		dataEnergy.textContent = "$1,102";
-		dataCapita.textContent = "27";
 	}
 }
 

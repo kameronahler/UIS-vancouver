@@ -5,6 +5,8 @@ Sticky Nav
 ==================================*/
 
 #section-header {
+    z-index:15;
+
     &.nav-scrolling {
         @include bp(md){
             /* --------------
@@ -16,7 +18,7 @@ Sticky Nav
                 width: 100%;
                 float: none;
                 position: fixed;
-                background: rgba(255, 255, 255, .98)
+                background: rgba(255, 255, 255, .98);
             }
 
             /* --------------
@@ -71,7 +73,7 @@ Sticky Nav
                 @include absolute(8px,0);
                 content: "";
                 display: block;
-                background: #fff url('http://wearemaui.dev.engagingplans.org/sites/wearemaui.dev.engagingplans.org/files/styles/site_logo/public/logo.png?itok=dVBu5tcu') center no-repeat;
+                background: transparent url('/files/logo-wide.png') center no-repeat;
                 background-size: contain;
                 height: 47px;
                 width: 100%;

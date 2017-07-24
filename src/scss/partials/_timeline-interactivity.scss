@@ -11,14 +11,19 @@ Permanent Attributes
 #existingphase1,
 #existingphase2,
 #existingphase3,
-#existinggear,
 #number {
 	transition: $transition-3 ease .5s;
 	transform-origin: 50% 50%;
 }
+#existinggear{
+	transition: $transition-3 ease .5s;
+	transform-origin:50% 50% 0;
+	-moz-transform-origin:50% 82% 0;
+}
 
 #renewable1 {
 	transform-origin: 47.5% 54.5%;
+	-moz-transform-origin: 50% 41% 0;
 }
 
 #new1,
@@ -35,6 +40,7 @@ Permanent Attributes
 
 #trips1, #trips2, #trips3, #trips4 {
 	opacity: 0;
+	transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	transition: $transition-3 ease .5s;
 }

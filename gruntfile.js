@@ -158,21 +158,29 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     mangle: false,
-                    compress: false,
+                    compress: true,
                     preserveComments: 'all'
                 },
-                src: 'src/js/*.js',
-                dest: 'js/main.js',
+                files: [{
+                  expand: true,
+                  cwd: 'src/js',
+                  src: '**/*.js',
+                  dest: 'js'
+                }],
                 sourceMap: true,
                 sourceMapIncludeSources: true
             },
             build: {
                 options: {
                     mangle: false,
-                    compress: false
+                    compress: true
                 },
-                src: 'src/js/*.js',
-                dest: 'js/main.js'
+                files: [{
+                  expand: true,
+                  cwd: 'src/js',
+                  src: '**/*.js',
+                  dest: 'js'
+                }]
             }
         },
 
