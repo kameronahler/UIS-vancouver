@@ -21,7 +21,7 @@ Sticky input bar
 ----------------------------------*/
 .sim-input {
 	@include flex(center,center);
-	background: $color-1;
+	background: linear-gradient(10deg, $color-1, lighten($color-1,5%));
 	color: #fff;
 	width: 100%;
 	position: fixed;
@@ -30,7 +30,8 @@ Sticky input bar
 	bottom: 0;
 	height: 100px;
 	z-index: 9999999;
-	& .admin-menu {
+
+	html.overlay-open & {
 		display: none;
 	}
 
@@ -40,17 +41,21 @@ Sticky input bar
 		content: "";
 		width: 100%;
 		height: 100%;
-		box-shadow: 0 -4px 16px -6px rgba(black, .17);
+		box-shadow: $box-shadow-4;
 	}
 
 	&__input-wrapper {
 		position: relative;
 		margin-left: 2rem;
 		z-index: 998;
+		text-shadow:$text-shadow-1;
 
 		output {
 			display: block;
 			text-align: center;
+			font-size:16px;
+			font-weight:bold;
+
 		}
 	}
 }
@@ -61,18 +66,43 @@ Row
 .row {
 	@include flex();
 	flex-wrap: wrap;
+	margin-bottom:2rem;
 }
 
 // header
 .row__header {
 	width: 100%;
 	text-align: center;
-	color: #333;
+	padding:1em;
+	border-radius:2px;
+	// background:linear-gradient(10deg, $color-2, lighten($color-2,10%));
+
+	@include bp(md){
+		padding:1.5em;
+	}
+
+	h2{
+		font-size:20px;
+		margin-bottom:1em;
+		text-shadow:$text-shadow-1;	
+	}
+	p{
+		font-size:16px;
+
+		&:last-child{
+			margin-bottom:16px * 2;
+		}
+	}
+	.button{
+		margin-bottom:16px * 2;
+		background:$color-2
+	}
 }
 
 
 // individual sections
 .sim {
+	background:linear-gradient(170deg, lighten($color-1,50%), #fff);
 
 	// 100% for xs
 	width: 100%;
@@ -150,7 +180,8 @@ Row
 		transition: .2s ease;
 		opacity: 0;
 		color: #fff;
-		font-size: 15px;
+		font-size: 14px;
+		font-family: Arial, Helvetica, sans-serif;
 		box-shadow: 0 4px 15px -4px rgba(black, .17);
 		z-index: 99;
 
@@ -164,11 +195,14 @@ Row
 		}
 
 		i {
+			display:inline-block;
+			width:100%;
+			text-align:center;
 			img {
 				width: 1em;
 				height: 1em;
-				vertical-align: top;
 				margin-right: .25em;
+				margin-bottom: .25em;
 			}
 		}
 	}
@@ -178,6 +212,11 @@ Row
 		display: block;
 		margin: 0 auto 1rem;
 		transition: .5s ease .2s;
+
+		svg{
+			width:100%;
+			height:auto;
+		}
 	}
 
 	// data number figures
