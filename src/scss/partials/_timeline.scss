@@ -276,8 +276,8 @@ Row
 		
 		// for figures that have the data numbers over the imagery
 		&--overlay {
-			@include absolute(45%,50%);
-			transform: translate(-50%);
+			@include absolute(40%,50%);
+			transform: translateX(-50%);
 			width: 50%;
 			box-shadow: none;
 			box-shadow: $box-shadow-2;

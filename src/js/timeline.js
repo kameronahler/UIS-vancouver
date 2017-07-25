@@ -182,6 +182,8 @@ function yearChange(){
 		dataElectric.textContent = "150,000";
 		dataMode.textContent = "70%";
 		dataEnergy.textContent = "$1,102";
+	} else {
+		return false;
 	}
 }
 
