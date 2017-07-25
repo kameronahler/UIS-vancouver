@@ -24,7 +24,7 @@ intro styling
         h2 {
             font-size: 24px;
             line-height: 1.2;
-            margin-bottom: 1.2em;
+            margin-bottom: 1.2em * 2;
             text-shadow: $text-shadow-1;
         }
 
@@ -55,7 +55,7 @@ intro styling
             font-size: 20px;
             line-height: 1.2;
             color: #fff;
-            margin-bottom: 1.2em;
+            margin-bottom: 1.2em * 2;
             text-align: center;
 
             @include bp(md) {
@@ -145,6 +145,7 @@ adjust ep stuff
     } //button
     #comment-form #edit-actions input {
         font-size: 1rem;
+        margin-bottom: 2em;
         transition: background-color.3s ease-in-out !important;
 
         &:hover {

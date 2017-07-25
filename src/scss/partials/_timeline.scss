@@ -4,6 +4,7 @@ Timeline
 
 ==================================*/
 .page-node-18{
+
 	#launcher{
 		display:none;
 	}
@@ -45,12 +46,11 @@ Sticky input bar
 
 	@include bp(md){
 		bottom:0;
-		top: 70pxi;
+		top: 62pxi;
 		min-height: 82pxi;
 	}
 	@include bp(lg){
 		top: 60pxi;
-		padding-top:40pxi;
 	}
 
 	html.overlay-open & {
@@ -75,13 +75,14 @@ Sticky input bar
 		output {
 			display: block;
 			text-align: center;
-			font-size:16px;
+			font-size:20px;
 			font-weight:bold;
 			
 			@include bp(lg){
 				display:block;
 				float:right;
 				margin-left:1em;
+				width:72px;
 				line-height:1;
 			}
 		}
@@ -105,35 +106,35 @@ Row
 	text-align: center;
 	padding:1em;
 	border-radius:2px;
-	// background:linear-gradient(10deg, $color-2, lighten($color-2,10%));
 
 	@include bp(md){
 		padding:1.5em;
 	}
 
 	h2{
-		font-size:20px;
+		font-size:24px;
 		margin-bottom:1em;
 		text-shadow:$text-shadow-1;	
 	}
 	p{
-		font-size:16px;
+		font-size:20px;
 
 		&:last-child{
 			margin-bottom:16px * 2;
 		}
 	}
 	.button{
-		font-size:16px;
+		font-size:20px;
 		margin-bottom:16px * 2;
-		background:$color-2
+		background:$color-2;
+		padding:.5em 2em;
 	}
 }
 
 
 // individual sections
 .sim {
-	background:linear-gradient(170deg, lighten($color-1,50%), #fff);
+	background:linear-gradient(170deg, lighten($color-1,60%), #fff);
 
 	// 100% for xs
 	width: 100%;
@@ -175,7 +176,7 @@ Row
 			text-shadow: $text-shadow-1;
 			min-height: 46px;
 			line-height: 1.3333;
-			font-size:16px;
+			font-size:20px;
 			z-index:3;
 		}
 	}
@@ -218,8 +219,8 @@ Row
 		transition: .2s ease;
 		opacity: 0;
 		color: #fff;
-		font-size: 14px;
-		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		font-family: $font-1;
 		box-shadow: 0 4px 15px -4px rgba(black, .17);
 		z-index: 99;
 
@@ -265,7 +266,7 @@ Row
 		padding: 10px 20px;
 		text-align: center;
 		font-weight: 700;
-		font-size: 18px;
+		font-size: 24px;
 		min-width: 113px;
 		line-height: 1;
 		margin-bottom: 1rem;

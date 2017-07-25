@@ -1,0 +1,27 @@
+/* ===============================
+
+Font SMASH
+
+================================= */
+
+body{
+	font-size:16px;
+	font-family:$font-1;
+}
+
+.mason-timeline-inner{
+	font-size:13px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family:$font-2 !important;
+}
+
+.button,button,input[type="submit"],input[type="button"]{
+	font-family:$font-2 !important;
+	background:$color-2 !important;
+}
+
+#block-system-main-menu ul li a{
+	font-family:$font-2 !important;
+}
