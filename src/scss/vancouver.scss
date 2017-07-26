@@ -38,10 +38,10 @@ Accessibility Concerns
 /* -----------------
 Brightpages 3.0
 -----------------*/
-// @import "partials/ep/bp3/_01-base";
-// @import "partials/ep/bp3/_02-layout";
-// @import "partials/ep/bp3/_04-state";
-// @import "partials/ep/bp3/_05-theme";
+@import "partials/ep/bp3/_01-base";
+@import "partials/ep/bp3/_02-layout";
+@import "partials/ep/bp3/_04-state";
+@import "partials/ep/bp3/_05-theme";
 
 // this has styles for bundles from DOLA but is left out by default
 // @import "partials/ep/bp3/_03-modules";

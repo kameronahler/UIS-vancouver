@@ -14,7 +14,7 @@
         <section class="sim sim--33">
             <header class="sim__header">
                 <h3><span class="sim__tooltip-trigger">Population</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Expected population of Vancouver.</span></h3>
-                <figure role="presentation" class="sim__icon sim__icon--population" role="presentation">
+                <figure aria-hidden="true" class="sim__icon sim__icon--population" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
                         <title>icon-population2-v2</title>
                         <g id="population_v2" data-name="population v2">
@@ -147,7 +147,7 @@
         <section class="sim sim--33">
             <header class="sim__header">
                 <h3><span class="sim__tooltip-trigger">Energy Costs Per Household</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Annual expenditures on energy and carbon taxes per person.</span></h3>
-                <figure class="sim__icon" role="presentation">
+                <figure class="sim__icon" aria-hidden="true" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
                         <title>icon-energy-v2</title>
                         <g id="energy_v2" data-name="energy v2">
@@ -255,7 +255,7 @@
         <section class="sim sim--33">
             <header class="sim__header">
                 <h3><span class="sim__tooltip-trigger">Carbon Pollution Reduction<br>(Compared to 2007)</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Percentage in City-wide reductions in carbon pollution relative to 2007 levels.</span></h3>
-                <figure role="presentation" class="sim__icon sim__icon--carbon" role="presentation">
+                <figure aria-hidden="true" class="sim__icon sim__icon--carbon" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
                         <title>icon-carbon-pollution-v2</title>
                         <g id="carbon_v2" data-name="carbon v2">
@@ -323,7 +323,7 @@
             <figure class="sim-graph sim-graph--total">
                 <header class="sim__header">
                     <h3><span class="">Total Energy Use Per Person</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>This is a tooltip</span></h3>
-                    <figure role="presentation" class="sim__icon" role="presentation">
+                    <figure aria-hidden="true" class="sim__icon" role="presentation">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 72 72">
                             <defs>
                                 <radialGradient id="radial-gradient" cx="36" cy="32.346" r="31.662" gradientUnits="userSpaceOnUse">
@@ -366,14 +366,14 @@
                     </figure>
                 </header>
                 <span class="sim__data" id="dataTotal">82</span>
-                <span class="sim-graph__bar sim-graph__bar--total" style="width:100%" role="presentation" id="dataTotalBar"></span>
+                <span class="sim-graph__bar sim-graph__bar--total" style="width:100%" aria-hidden="true" id="dataTotalBar"></span>
             </figure>
         </section>
         <section class="sim sim--graph">
             <figure class="sim-graph sim-graph--renewable">
                 <header class="sim__header">
                     <h3><span class="sim__tooltip-trigger">Renewable Energy</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Percentage of City-wide energy use that is non-fossil-fuel</span></h3>
-                    <figure role="presentation" class="sim__icon" role="presentation">
+                    <figure aria-hidden="true" role="presentation" class="sim__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
                             <title>icon-renewable</title>
                             <g id="renewable">
@@ -395,7 +395,7 @@
                     </figure>
                 </header>
                 <span class="sim__data" id="dataRenewable">35%</span>
-                <span class="sim-graph__bar sim-graph__bar--renewable" style="width:35%" role="presentation" id="dataRenewableBar"></span>
+                <span class="sim-graph__bar sim-graph__bar--renewable" style="width:35%" aria-hidden="true" id="dataRenewableBar"></span>
             </figure>
         </section>
     </section>
@@ -408,40 +408,121 @@
         <section class="sim">
             <header class="sim__header">
                 <h3><span class="sim__tooltip-trigger">% of New Buildings Built to Zero Emission Standard</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Percentage of new buildings that don't produce any carbon pollution. Includes buildings connected to zero emissions neighborhood energy systems.</span></h3>
-                <figure class="sim__icon sim__icon--overlay" role="presentation">
+                <figure class="sim__icon" aria-hidden="true" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
-                        <title>icon-new</title>
-                        <g id="new">
+                        <title>icon-new-v2</title>
+                        <g id="new_v2" data-name="new v2">
                             <g id="crane">
-                                <path d="M62.35,6.11,61.014,4.135a.657.657,0,0,0-.544-.289H30.307a.657.657,0,0,0-.544.289L28.427,6.11a.657.657,0,0,0,.544,1.025H53.449V67.276H57.76V7.135h4.046A.657.657,0,0,0,62.35,6.11Z" fill="#928308" />
-                                <path d="M63.908,4.552,62.572,2.578a.657.657,0,0,0-.544-.289H31.864a.657.657,0,0,0-.544.289L29.984,4.552a.657.657,0,0,0,.544,1.025H55.006v61.7h4.311V5.578h4.046A.657.657,0,0,0,63.908,4.552Z" fill="#f3efce" stroke="#c3ae0a" stroke-miterlimit="10" />
-                                <path d="M63.908,4.552,62.572,2.578a.657.657,0,0,0-.544-.289H31.864a.657.657,0,0,0-.544.289L29.984,4.552a.657.657,0,0,0,.544,1.025H55.006v61.7h4.311V5.578h4.046A.657.657,0,0,0,63.908,4.552Z" fill="none" stroke="#c3ae0a" stroke-miterlimit="10" />
+                                <path d="M65.9,6.11,64.566,4.135a.657.657,0,0,0-.544-.289H23.1a.657.657,0,0,0-.544.289L21.225,6.11a.657.657,0,0,0,.544,1.025h31.68v61.6H57.76V7.135h7.6A.657.657,0,0,0,65.9,6.11Z" fill="gray" />
+                                <path d="M67.459,4.552,66.123,2.578a.657.657,0,0,0-.544-.289H24.662a.657.657,0,0,0-.544.289L22.782,4.552a.657.657,0,0,0,.544,1.025h31.68V68.737h4.311V5.578h7.6A.657.657,0,0,0,67.459,4.552Z" fill="#b3b3b3" />
+                                <rect x="55.176" y="5.962" width="3.839" height="1.172" fill="gray" />
+                                <path d="M67.459,4.552,66.123,2.578a.657.657,0,0,0-.544-.289H24.662a.657.657,0,0,0-.544.289L22.782,4.552a.657.657,0,0,0,.544,1.025h31.68V68.737h4.311V5.578h7.6A.657.657,0,0,0,67.459,4.552Z" fill="none" stroke="#c3ae0a" stroke-miterlimit="10" />
+                                <path d="M67.459,4.552,66.123,2.578a.657.657,0,0,0-.544-.289H24.662a.657.657,0,0,0-.544.289L22.782,4.552a.657.657,0,0,0,.544,1.025h31.68V68.737h4.311V5.578h7.6A.657.657,0,0,0,67.459,4.552Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <path d="M54.653,5.578H59.5" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <g id="new3">
+                                <path d="M45.584,39.939H68.92a2.334,2.334,0,0,1,2.334,2.334v28.9a0,0,0,0,1,0,0H44.6a1.085,1.085,0,0,1-1.085-1.085V42.009A2.07,2.07,0,0,1,45.584,39.939Z" fill="#66aed3" />
+                                <path d="M47.052,39.939H69.047a2.206,2.206,0,0,1,2.206,2.206V69.609a0,0,0,0,1,0,0H45.1a0,0,0,0,1,0,0V41.9A1.957,1.957,0,0,1,47.052,39.939Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="55.019" y="62.599" width="3.001" height="6.735" fill="#66aed3" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="58.021" y="62.599" width="3.001" height="6.735" fill="#66aed3" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="55.019" y="62.599" width="3.001" height="6.735" fill="#0078b6" />
+                                <rect x="58.021" y="62.599" width="3.001" height="6.735" fill="#0078b6" />
+                                <rect x="55.019" y="62.599" width="3.001" height="6.735" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="58.021" y="62.599" width="3.001" height="6.735" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="55.019" y="62.599" width="3.001" height="6.735" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="58.021" y="62.599" width="3.001" height="6.735" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <path d="M55.019,62.339a3,3,0,0,1,6,0Z" fill="#f2f2f2" />
+                                <path d="M55.019,62.339a3,3,0,0,1,6,0Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="48.148" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
+                                <rect x="59.223" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
+                                <rect x="48.148" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
+                                <rect x="47.927" y="42.275" width="8.824" height="1.733" fill="#fff" />
+                                <polygon points="67.749 44.008 58.925 44.008 59.3 42.275 68.124 42.275 67.749 44.008" fill="#fff" />
+                                <rect x="59.223" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
+                                <rect x="48.148" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="59.3" y="51.272" width="8.824" height="1.733" fill="#fff" />
+                                <rect x="48.303" y="51.272" width="8.824" height="1.733" fill="#fff" />
+                                <rect x="59.223" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="48.148" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="59.223" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                            </g>
+                            <g id="new2">
+                                <path d="M45.477,71.186H19.538a1.091,1.091,0,0,1-1.172-.985V30.393a1.046,1.046,0,0,1,.94-.966l25.939-4.4a1.133,1.133,0,0,1,1.4.966V70.2A1.091,1.091,0,0,1,45.477,71.186Z" fill="#379a28" />
+                                <path d="M47.605,69.7H21.666a1.091,1.091,0,0,1-1.172-.985V28.9a1.046,1.046,0,0,1,.94-.966l25.939-4.4a1.133,1.133,0,0,1,1.4.966V68.711A1.091,1.091,0,0,1,47.605,69.7Z" fill="#87c27e" />
+                                <path d="M47.605,69.7H21.666a1.091,1.091,0,0,1-1.172-.985V28.9a1.046,1.046,0,0,1,.94-.966l25.939-4.4a1.133,1.133,0,0,1,1.4.966V68.711A1.091,1.091,0,0,1,47.605,69.7Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="24.102" y="30.658" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="32.182" y="30.658" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="40.263" y="30.658" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="24.102" y="36.988" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="32.182" y="36.988" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="40.263" y="36.988" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="24.102" y="43.318" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="32.182" y="43.318" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="40.263" y="43.318" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="24.102" y="49.648" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="32.182" y="49.648" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
+                                <rect x="26.555" y="56.431" width="16.163" height="4.125" rx="1.387" ry="1.387" fill="#0078b6" />
+                                <rect x="40.263" y="49.648" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="#d7ebd4" stroke="#666" stroke-miterlimit="10" />
                                 <g>
-                                    <line x1="58.893" y1="28.682" x2="35.809" y2="14.26" fill="none" stroke="#c2dfed" stroke-linecap="round" stroke-miterlimit="10" />
-                                    <line x1="35.809" y1="14.26" x2="12.725" y2="28.682" fill="none" stroke="#c2dfed" stroke-linecap="round" stroke-miterlimit="10" />
-                                    <line x1="59.338" y1="28.126" x2="36.254" y2="13.703" fill="none" stroke="#66aed3" stroke-linecap="round" stroke-miterlimit="10" />
-                                    <path d="M37.218,5.578l.039,2.5c-.614,1.489-2.13,1.786-2.925,3.07a2.393,2.393,0,0,0,.727,3.22,2.149,2.149,0,0,0,3.363-2.283" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-miterlimit="10" />
-                                    <line x1="36.254" y1="13.703" x2="13.17" y2="28.126" fill="none" stroke="#66aed3" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <polygon points="24.519 31.008 28.593 34.432 28.593 31.008 24.519 31.008" fill="#99c9e2" />
+                                    <polygon points="32.599 31.008 36.673 34.432 36.673 31.008 32.599 31.008" fill="#99c9e2" />
+                                    <polygon points="40.68 31.008 44.754 34.432 44.754 31.008 40.68 31.008" fill="#99c9e2" />
+                                    <polygon points="40.68 37.338 44.754 40.762 44.754 37.338 40.68 37.338" fill="#99c9e2" />
+                                    <polygon points="32.599 37.338 36.673 40.762 36.673 37.338 32.599 37.338" fill="#99c9e2" />
+                                    <polygon points="24.519 37.338 28.593 40.762 28.593 37.338 24.519 37.338" fill="#99c9e2" />
+                                    <polygon points="24.519 43.668 28.593 47.092 28.593 43.668 24.519 43.668" fill="#99c9e2" />
+                                    <polygon points="32.599 43.668 36.673 47.092 36.673 43.668 32.599 43.668" fill="#99c9e2" />
+                                    <polygon points="40.68 43.668 44.754 47.092 44.754 43.668 40.68 43.668" fill="#99c9e2" />
+                                    <polygon points="24.519 49.998 28.593 53.422 28.593 49.998 24.519 49.998" fill="#99c9e2" />
+                                    <polygon points="32.599 49.998 36.673 53.422 36.673 49.998 32.599 49.998" fill="#99c9e2" />
+                                    <polygon points="40.68 49.998 44.754 53.422 44.754 49.998 40.68 49.998" fill="#99c9e2" />
+                                </g>
+                                <rect x="24.102" y="30.658" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="32.182" y="30.658" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="40.263" y="30.658" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="24.102" y="36.988" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="32.182" y="36.988" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="40.263" y="36.988" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="24.102" y="43.318" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="32.182" y="43.318" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="40.263" y="43.318" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="24.102" y="49.648" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="32.182" y="49.648" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <polygon points="26.555 57.818 42.717 57.818 41.33 56.431 27.942 56.431 26.555 57.818" fill="#99c9e2" />
+                                <rect x="26.555" y="56.431" width="16.163" height="4.125" rx="1.387" ry="1.387" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="40.263" y="49.648" width="4.908" height="4.125" rx="0.765" ry="0.765" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="31.28" y="62.806" width="6.712" height="6.528" fill="#fff" />
+                                <rect x="31.28" y="62.806" width="6.712" height="6.528" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <line x1="34.636" y1="62.806" x2="34.636" y2="69.335" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <g>
+                                    <line x1="23.651" y1="25.178" x2="23.651" y2="27.581" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <line x1="31.204" y1="23.797" x2="31.204" y2="26.201" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <line x1="19.861" y1="25.258" x2="32.897" y2="22.928" fill="none" stroke="#0078b6" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <line x1="34.393" y1="22.648" x2="47.429" y2="20.318" fill="none" stroke="#0078b6" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <line x1="20.631" y1="25.616" x2="33.666" y2="23.286" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <line x1="38.078" y1="22.625" x2="38.078" y2="25.028" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <line x1="45.632" y1="21.244" x2="45.632" y2="23.647" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-miterlimit="10" />
+                                    <line x1="35.059" y1="23.063" x2="48.094" y2="20.733" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-miterlimit="10" />
                                 </g>
                             </g>
                             <g id="new1">
-                                <rect x="0.746" y="45.681" width="13.898" height="24.03" fill="#f3efce" />
+                                <rect x="0.746" y="45.681" width="13.898" height="25.491" rx="0.849" ry="0.849" fill="#f3efce" />
                                 <rect x="2.322" y="45.681" width="12.323" height="1.418" fill="#e7df9d" />
                                 <rect x="3.695" y="47.099" width="8.001" height="2.262" rx="0.673" ry="0.673" fill="#cce4f0" />
                                 <rect x="5.602" y="51.084" width="8.001" height="2.262" rx="0.673" ry="0.673" fill="#cce4f0" />
                                 <rect x="3.695" y="55.204" width="8.001" height="2.262" rx="0.673" ry="0.673" fill="#cce4f0" />
-                                <rect x="13.857" y="54.578" width="13.111" height="15.133" fill="#f3efce" />
-                                <rect x="2.322" y="45.681" width="12.323" height="22.587" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="13.857" y="54.578" width="13.111" height="16.593" fill="#f3efce" />
+                                <rect x="2.322" y="45.681" width="12.323" height="24.047" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
                                 <rect x="14.645" y="54.244" width="12.323" height="1.418" fill="#e7df9d" />
-                                <rect x="14.645" y="54.044" width="12.323" height="14.224" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="14.645" y="54.044" width="12.323" height="15.684" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
                                 <rect x="0.746" y="43.318" width="15.474" height="2.17" fill="#b3b3b3" />
-                                <rect x="7.888" y="62.087" width="3.001" height="5.275" fill="#e7df9d" />
-                                <rect x="22.238" y="62.087" width="3.001" height="5.275" fill="#e7df9d" />
+                                <rect x="7.888" y="62.087" width="3.001" height="6.735" fill="#e7df9d" />
+                                <rect x="22.238" y="62.087" width="3.001" height="6.735" fill="#e7df9d" />
                                 <rect x="0.746" y="43.538" width="15.474" height="2.17" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="6.982" y="62.993" width="3.001" height="5.275" fill="#c3ae0a" />
-                                <rect x="6.982" y="62.993" width="3.001" height="5.275" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="21.386" y="62.993" width="3.001" height="5.275" fill="#c3ae0a" />
-                                <rect x="21.386" y="62.993" width="3.001" height="5.275" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="6.982" y="62.993" width="3.001" height="6.735" fill="#c3ae0a" />
+                                <rect x="6.982" y="62.993" width="3.001" height="6.735" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                                <rect x="21.386" y="62.993" width="3.001" height="6.735" fill="#c3ae0a" />
+                                <rect x="21.386" y="62.993" width="3.001" height="6.735" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
                                 <rect x="4.711" y="48.093" width="7.737" height="2.158" rx="0.646" ry="0.646" fill="#66aed3" />
                                 <rect x="4.711" y="52.214" width="7.737" height="2.158" rx="0.646" ry="0.646" fill="#66aed3" />
                                 <rect x="4.711" y="56.335" width="7.737" height="2.158" rx="0.646" ry="0.646" fill="#66aed3" />
@@ -464,116 +545,96 @@
                                 <rect x="18.482" y="62.755" width="1.215" height="2.262" rx="0.262" ry="0.262" transform="translate(38.178 127.771) rotate(180)" fill="#cce4f0" />
                                 <rect x="16.791" y="62.806" width="2.895" height="2.158" rx="0.395" ry="0.395" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
                             </g>
-                            <g id="new2">
-                                <rect x="28.313" y="45.767" width="13.88" height="23.944" fill="#afd7a9" />
-                                <rect x="29.87" y="45.767" width="12.323" height="22.416" fill="none" stroke="#379a28" stroke-miterlimit="10" />
-                                <rect x="33.968" y="62.002" width="3.001" height="5.705" fill="#87c27e" />
-                                <rect x="36.97" y="62.002" width="3.001" height="5.705" fill="#87c27e" />
-                                <rect x="33.03" y="62.909" width="3.001" height="5.275" fill="#5ccc4c" />
-                                <rect x="36.031" y="62.909" width="3.001" height="5.275" fill="#5ccc4c" />
-                                <rect x="33.03" y="62.909" width="3.001" height="5.275" fill="none" stroke="#29731e" stroke-miterlimit="10" />
-                                <rect x="36.031" y="62.909" width="3.001" height="5.275" fill="none" stroke="#29731e" stroke-miterlimit="10" />
-                                <rect x="36.55" y="53.148" width="3.368" height="3.422" rx="0.543" ry="0.543" fill="#87c27e" />
-                                <rect x="31.412" y="53.148" width="3.185" height="3.422" rx="0.528" ry="0.528" fill="#87c27e" />
-                                <rect x="32.224" y="52.679" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="#f2f2f2" />
-                                <rect x="32.224" y="52.679" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="none" stroke="#29731e" stroke-miterlimit="10" />
-                                <rect x="37.319" y="52.679" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="#f2f2f2" />
-                                <rect x="37.319" y="52.679" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="none" stroke="#29731e" stroke-miterlimit="10" />
-                                <rect x="36.55" y="47.959" width="3.368" height="3.422" rx="0.543" ry="0.543" fill="#87c27e" />
-                                <rect x="31.412" y="47.959" width="3.185" height="3.422" rx="0.528" ry="0.528" fill="#87c27e" />
-                                <rect x="32.224" y="47.49" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="#f2f2f2" />
-                                <rect x="32.224" y="47.49" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="none" stroke="#29731e" stroke-miterlimit="10" />
-                                <rect x="37.319" y="47.49" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="#f2f2f2" />
-                                <rect x="37.319" y="47.49" width="2.599" height="3.422" rx="0.477" ry="0.477" fill="none" stroke="#29731e" stroke-miterlimit="10" />
-                            </g>
-                            <g id="new3">
-                                <path d="M45.584,39.939H68.92a2.334,2.334,0,0,1,2.334,2.334V69.711a0,0,0,0,1,0,0H43.514a0,0,0,0,1,0,0v-27.7A2.07,2.07,0,0,1,45.584,39.939Z" fill="#1174a8" />
-                                <path d="M47.052,39.939H69.047a2.206,2.206,0,0,1,2.206,2.206v26a0,0,0,0,1,0,0H45.1a0,0,0,0,1,0,0V41.9A1.957,1.957,0,0,1,47.052,39.939Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="55.019" y="62.599" width="3.001" height="5.275" fill="#66aed3" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="58.021" y="62.599" width="3.001" height="5.275" fill="#66aed3" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="55.019" y="62.599" width="3.001" height="5.275" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="58.021" y="62.599" width="3.001" height="5.275" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <path d="M55.019,62.339a3,3,0,0,1,6,0Z" fill="#f2f2f2" />
-                                <path d="M55.019,62.339a3,3,0,0,1,6,0Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="48.148" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
-                                <rect x="59.223" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
-                                <rect x="48.148" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
-                                <rect x="48.303" y="42.275" width="8.824" height="1.733" fill="#cce4f0" />
-                                <rect x="59.3" y="42.275" width="8.824" height="1.733" fill="#cce4f0" />
-                                <rect x="59.223" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="#99c9e2" />
-                                <rect x="48.148" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="59.3" y="51.272" width="8.824" height="1.733" fill="#cce4f0" />
-                                <rect x="48.303" y="51.272" width="8.824" height="1.733" fill="#cce4f0" />
-                                <rect x="59.223" y="41.985" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="48.148" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                                <rect x="59.223" y="50.942" width="8.979" height="7.238" rx="0.715" ry="0.715" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            </g>
                         </g>
                     </svg>
-                    <span class="sim__data sim__data--overlay" id="dataNew">0%</span>
+                    <span class="sim__data" id="dataNew">0%</span>
                 </figure>
             </header>
         </section>
         <section class="sim">
             <header class="sim__header">
                 <h3><span class="sim__tooltip-trigger">% of Existing Buildings Upgraded to Reduce Emissions</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Percentage of existing buildings that don't produce any carbon pollution. Includes buildings connected to zero emissions neighborhood energy systems.</span></h3>
-                <figure class="sim__icon sim__icon--overlay" role="presentation">
+                <figure class="sim__icon" aria-hidden="true" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
-                        <title>icon-existing</title>
-                        <g id="existing">
-                            <path d="M3.813,4.908H66.456a1.436,1.436,0,0,1,1.436,1.436V69.121A2.879,2.879,0,0,1,65.013,72H5.256a2.879,2.879,0,0,1-2.879-2.879V6.344A1.436,1.436,0,0,1,3.813,4.908Z" fill="#d7ebd4" />
-                            <rect x="2.377" y="4.908" width="4.876" height="67.092" rx="2.438" ry="2.438" fill="#afd7a9" />
-                            <g>
-                                <rect x="0.819" y="1.636" width="70.363" height="4.471" rx="1.912" ry="1.912" fill="#0078b6" />
-                                <polygon points="71.181 3.272 0.819 3.272 1.73 1.636 69.545 1.636 71.181 3.272" fill="#66aed3" />
-                                <rect x="0.819" y="1.636" width="70.363" height="3.272" rx="1.636" ry="1.636" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                        <title>icon-existing-v2</title>
+                        <g id="existing_v2" data-name="existing v2">
+                            <g id="heat">
+                                <path id="existing-phase6" d="M8.24,65.65A7.552,7.552,0,0,1,.7,58.107v-22.8a7.505,7.505,0,0,1,2.167-5.29l10.77-10.932a7.54,7.54,0,0,1,10.512-.226l2.945,2.74.022-7.162a7.545,7.545,0,0,1,7.542-7.528h29.1A7.552,7.552,0,0,1,71.3,14.456V58.107A7.552,7.552,0,0,1,63.76,65.65Z" fill="none" stroke="#fef3f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" />
+                                <path id="existing-phase7" d="M8.24,62.65A4.548,4.548,0,0,1,3.7,58.107v-22.8A4.521,4.521,0,0,1,5,32.124l10.768-10.93a4.541,4.541,0,0,1,6.331-.136L27.846,26.4l2.229.006.038-11.958a4.546,4.546,0,0,1,4.542-4.538h29.1A4.548,4.548,0,0,1,68.3,14.456V58.107A4.548,4.548,0,0,1,63.76,62.65Z" fill="none" stroke="#fde2df" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" />
+                                <path id="existing-phase8" d="M8.24,59.65A1.545,1.545,0,0,1,6.7,58.107v-22.8a1.539,1.539,0,0,1,.444-1.083L17.907,23.3a1.513,1.513,0,0,1,1.1-.46,1.539,1.539,0,0,1,1.051.414L26.662,29.4l6.4.018.048-14.956a1.545,1.545,0,0,1,1.542-1.548h29.1A1.545,1.545,0,0,1,65.3,14.456V58.107A1.545,1.545,0,0,1,63.76,59.65Z" fill="none" stroke="#fcdbd7" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75" />
                             </g>
-                            <path d="M4.108,4.908H67.892a0,0,0,0,1,0,0V68.663a1.4,1.4,0,0,1-1.4,1.4H5.511a1.4,1.4,0,0,1-1.4-1.4V4.908A0,0,0,0,1,4.108,4.908Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <rect x="0.819" y="22.36" width="70.363" height="4.756" rx="1.972" ry="1.972" fill="#0078b6" />
-                            <rect x="9.023" y="54.156" width="7.023" height="15.91" fill="#3393c5" />
-                            <polygon points="71.181 23.996 0.819 23.996 1.73 22.36 69.545 22.36 71.181 23.996" fill="#66aed3" />
-                            <rect x="16.047" y="54.156" width="7.023" height="15.91" fill="#3393c5" />
-                            <rect x="9.023" y="54.156" width="14.047" height="1.624" fill="#005a89" />
-                            <rect x="9.023" y="54.156" width="7.023" height="15.91" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <rect x="16.047" y="54.156" width="7.023" height="15.91" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <rect x="0.819" y="22.36" width="70.363" height="3.272" rx="1.636" ry="1.636" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <path d="M51.249,52.156H63.238a1.65,1.65,0,0,1,1.65,1.65v6.305a0,0,0,0,1,0,0H49.6a0,0,0,0,1,0,0V53.806A1.65,1.65,0,0,1,51.249,52.156Z" fill="#0078b6" />
-                            <path d="M51.318,52.522s12.075,1.589,13.57,4l-.358-3.781L62.9,52.156H51.926Z" fill="#66aed3" />
-                            <path d="M52.328,52.156H63.3a1.587,1.587,0,0,1,1.587,1.587v6.368a0,0,0,0,1,0,0H50.741a0,0,0,0,1,0,0V53.743A1.587,1.587,0,0,1,52.328,52.156Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <rect x="6.859" y="52.073" width="18.167" height="2.084" rx="1.042" ry="1.042" fill="#0078b6" />
-                            <rect x="6.859" y="52.073" width="18.167" height="2.084" rx="1.042" ry="1.042" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <rect x="48.123" y="60.075" width="18.207" height="3.331" fill="#928308" />
-                            <rect x="47.663" y="16.399" width="18.125" height="3.65" fill="#928308" />
-                            <rect x="6.88" y="16.399" width="18.125" height="3.65" fill="#928308" />
-                            <rect x="49.298" y="60.075" width="17.033" height="2.389" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <path d="M49.912,8.481h12.6A1.415,1.415,0,0,1,63.931,9.9v6.541a0,0,0,0,1,0,0H48.5a0,0,0,0,1,0,0V9.9A1.415,1.415,0,0,1,49.912,8.481Z" fill="#0078b6" />
-                            <path d="M50.318,8.747s12.075,1.589,13.57,4L63.53,8.97,61.9,8.382H50.926Z" fill="#66aed3" />
-                            <path d="M51.138,8.481H62.577a1.354,1.354,0,0,1,1.354,1.354v6.6a0,0,0,0,1,0,0H49.784a0,0,0,0,1,0,0v-6.6A1.354,1.354,0,0,1,51.138,8.481Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <rect x="47.663" y="16.399" width="18.125" height="2.389" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <path d="M8.837,8.481H21.72a1.429,1.429,0,0,1,1.429,1.429v6.527a0,0,0,0,1,0,0H7.409a0,0,0,0,1,0,0V9.909A1.429,1.429,0,0,1,8.837,8.481Z" fill="#0078b6" />
-                            <path d="M9.579,8.747s12.075,1.589,13.57,4L22.791,8.97l-1.628-.588H10.187Z" fill="#66aed3" />
-                            <path d="M10.356,8.481H21.795a1.354,1.354,0,0,1,1.354,1.354v6.6a0,0,0,0,1,0,0H9a0,0,0,0,1,0,0v-6.6A1.354,1.354,0,0,1,10.356,8.481Z" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <rect x="6.88" y="16.399" width="18.125" height="2.389" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
-                            <polygon id="existingphase3" points="29.869 13.334 26.952 16.667 28.503 16.667 28.503 18.507 31.169 18.507 31.169 16.667 32.721 16.667 29.869 13.334" fill="#e7f3e5" />
-                            <polygon points="29.869 13.334 26.952 16.667 28.503 16.667 28.503 18.507 31.169 18.507 31.169 16.667 32.721 16.667 29.869 13.334" fill="none" stroke="#5fae53" stroke-linejoin="round" />
-                            <polygon id="existingphase2" points="36.677 11.667 33.76 15 35.311 15 35.311 18.507 37.977 18.507 37.977 15 39.528 15 36.677 11.667" fill="#e7f3e5" />
-                            <polygon points="36.677 11.667 33.76 15 35.311 15 35.311 18.507 37.977 18.507 37.977 15 39.528 15 36.677 11.667" fill="none" stroke="#379a28" stroke-linejoin="round" />
-                            <polygon id="existingphase1" points="43.516 10 40.599 13.334 42.15 13.334 42.15 18.507 44.817 18.507 44.817 13.334 46.368 13.334 43.516 10" fill="#e7f3e5" />
-                            <g id="existinggear">
-                                <path d="M41.886,57.963a2.3,2.3,0,0,1,1.32-2,9.4,9.4,0,0,0-.571-1.355,2.255,2.255,0,0,1-2.212-.713,2.206,2.206,0,0,1-.535-2.212,12.35,12.35,0,0,0-1.391-.571,2.4,2.4,0,0,1-4.281,0,12.35,12.35,0,0,0-1.391.571,2.206,2.206,0,0,1-.535,2.212,2.255,2.255,0,0,1-2.212.713,7.263,7.263,0,0,0-.571,1.355,2.3,2.3,0,0,1,1.32,2,2.4,2.4,0,0,1-1.32,2.14,12.35,12.35,0,0,0,.571,1.391,2.184,2.184,0,0,1,2.747,2.747,12.35,12.35,0,0,0,1.391.571,2.4,2.4,0,0,1,4.281,0,9.4,9.4,0,0,0,1.355-.571,2.195,2.195,0,0,1,.571-2.212,2.255,2.255,0,0,1,2.212-.713,9.4,9.4,0,0,0,.571-1.355A2.3,2.3,0,0,1,41.886,57.963Zm-3.068,2.461a3.445,3.445,0,1,1,1.034-2.461A3.361,3.361,0,0,1,38.819,60.425Z" fill="#d7ebd4" />
-                                <path d="M42.086,58.7a2.646,2.646,0,0,1,1.521-2.3,10.81,10.81,0,0,0-.658-1.56,2.6,2.6,0,0,1-2.548-.821,2.537,2.537,0,0,1-.616-2.545,14.238,14.238,0,0,0-1.6-.657,2.761,2.761,0,0,1-4.932,0,14.238,14.238,0,0,0-1.6.657,2.537,2.537,0,0,1-.616,2.545,2.6,2.6,0,0,1-2.548.821,8.353,8.353,0,0,0-.658,1.56,2.646,2.646,0,0,1,1.521,2.3,2.757,2.757,0,0,1-1.521,2.463,14.2,14.2,0,0,0,.658,1.6,2.514,2.514,0,0,1,3.164,3.161,14.238,14.238,0,0,0,1.6.657,2.761,2.761,0,0,1,4.932,0,10.836,10.836,0,0,0,1.562-.657,2.524,2.524,0,0,1,.658-2.545,2.6,2.6,0,0,1,2.548-.821,10.81,10.81,0,0,0,.658-1.56A2.646,2.646,0,0,1,42.086,58.7Zm-3.534,2.832A3.962,3.962,0,1,1,39.743,58.7,3.875,3.875,0,0,1,38.551,61.529Z" fill="#87c27e" />
-                                <path d="M41.886,57.963a2.3,2.3,0,0,1,1.32-2,9.4,9.4,0,0,0-.571-1.355,2.255,2.255,0,0,1-2.212-.713,2.206,2.206,0,0,1-.535-2.212,12.35,12.35,0,0,0-1.391-.571,2.4,2.4,0,0,1-4.281,0,12.35,12.35,0,0,0-1.391.571,2.206,2.206,0,0,1-.535,2.212,2.255,2.255,0,0,1-2.212.713,7.263,7.263,0,0,0-.571,1.355,2.3,2.3,0,0,1,1.32,2,2.4,2.4,0,0,1-1.32,2.14,12.35,12.35,0,0,0,.571,1.391,2.184,2.184,0,0,1,2.747,2.747,12.35,12.35,0,0,0,1.391.571,2.4,2.4,0,0,1,4.281,0,9.4,9.4,0,0,0,1.355-.571,2.195,2.195,0,0,1,.571-2.212,2.255,2.255,0,0,1,2.212-.713,9.4,9.4,0,0,0,.571-1.355A2.3,2.3,0,0,1,41.886,57.963Zm-3.068,2.461a3.445,3.445,0,1,1,1.034-2.461A3.361,3.361,0,0,1,38.819,60.425Z" fill="#e7f3e5" />
-                                <path d="M41.886,57.963a2.3,2.3,0,0,1,1.32-2,9.4,9.4,0,0,0-.571-1.355,2.255,2.255,0,0,1-2.212-.713,2.206,2.206,0,0,1-.535-2.212,12.35,12.35,0,0,0-1.391-.571,2.4,2.4,0,0,1-4.281,0,12.35,12.35,0,0,0-1.391.571,2.206,2.206,0,0,1-.535,2.212,2.255,2.255,0,0,1-2.212.713,7.263,7.263,0,0,0-.571,1.355,2.3,2.3,0,0,1,1.32,2,2.4,2.4,0,0,1-1.32,2.14,12.35,12.35,0,0,0,.571,1.391,2.184,2.184,0,0,1,2.747,2.747,12.35,12.35,0,0,0,1.391.571,2.4,2.4,0,0,1,4.281,0,9.4,9.4,0,0,0,1.355-.571,2.195,2.195,0,0,1,.571-2.212,2.255,2.255,0,0,1,2.212-.713,9.4,9.4,0,0,0,.571-1.355A2.3,2.3,0,0,1,41.886,57.963Zm-3.068,2.461a3.445,3.445,0,1,1,1.034-2.461A3.361,3.361,0,0,1,38.819,60.425Z" fill="none" stroke="#379a28" stroke-linecap="round" stroke-linejoin="round" />
+                            <g id="bg_fills" data-name="bg fills">
+                                <rect x="38.783" y="15.969" width="23.683" height="40.91" fill="#cce4f0" />
+                                <rect x="36" y="18.336" width="25.259" height="38.606" fill="#66aed3" />
+                                <rect x="37.576" y="17.945" width="23.683" height="37.791" fill="#cce4f0" />
+                                <rect x="37.012" y="15.058" width="26.77" height="1.82" fill="#e7df9d" />
+                                <polygon points="19.312 31.518 33.553 31.518 39.012 35.93 39.012 37.791 19.312 37.839 19.312 31.518" fill="#f3efce" />
+                                <polyline points="29.575 35.184 20.176 26.462 11.339 35.184 29.575 35.184" fill="#f3efce" />
+                                <rect x="10.217" y="37.791" width="25.784" height="19.151" fill="#99c9e2" />
+                                <rect x="10.316" y="38.351" width="25.684" height="1.264" fill="#99c9e2" />
+                                <rect x="11.422" y="38.351" width="24.578" height="17.385" fill="#cce4f0" />
+                                <rect x="36.033" y="16.125" width="26.77" height="1.82" fill="#c3ae0a" />
+                                <rect x="9.485" y="36.208" width="28.724" height="2.143" fill="#e7df9d" />
+                                <polygon points="18.9 32.686 33.141 32.686 37.379 36.208 18.9 36.208 18.9 32.686" fill="#c3ae0a" />
+                                <polyline points="28.551 36.207 19.153 27.485 10.316 36.207 28.551 36.207" fill="#c3ae0a" />
                             </g>
-                            <polygon points="43.516 10 40.599 13.334 42.15 13.334 42.15 18.507 44.817 18.507 44.817 13.334 46.368 13.334 43.516 10" fill="none" stroke="#29731e" stroke-linejoin="round" />
-                            <g>
-                                <rect x="0.819" y="42.511" width="70.363" height="4.674" rx="1.955" ry="1.955" fill="#0078b6" />
-                                <polygon points="71.181 44.147 0.819 44.147 1.73 42.511 69.545 42.511 71.181 44.147" fill="#66aed3" />
-                                <rect x="0.819" y="42.511" width="70.363" height="3.272" rx="1.636" ry="1.636" fill="none" stroke="#003c5b" stroke-miterlimit="10" />
+                            <g id="doors">
+                                <rect x="49.418" y="45.997" width="9.723" height="1.108" fill="#c3ae0a" />
+                                <rect x="49.418" y="45.997" width="4.862" height="9.739" fill="#e7df9d" stroke="#003c5b" stroke-miterlimit="10" stroke-width="0.781" />
+                                <rect x="44.599" y="50.042" width="9.723" height="1.648" transform="translate(100.327 1.406) rotate(90)" fill="#c3ae0a" />
+                                <rect x="54.28" y="45.997" width="4.862" height="9.739" fill="#e7df9d" stroke="#003c5b" stroke-miterlimit="10" stroke-width="0.781" />
+                                <rect x="49.461" y="46.022" width="9.723" height="1.648" transform="translate(108.644 93.692) rotate(180)" fill="#c3ae0a" />
+                                <rect x="49.418" y="45.997" width="4.862" height="9.739" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="54.28" y="45.997" width="4.862" height="9.739" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="26.157" y="45.997" width="6.437" height="9.739" fill="#c3ae0a" />
+                                <rect x="27.029" y="45.997" width="6.437" height="9.739" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="27.029" y="45.997" width="6.437" height="9.739" fill="#e7df9d" />
+                                <rect x="27.029" y="46.219" width="6.436" height="1.648" transform="translate(60.495 94.087) rotate(180)" fill="#c3ae0a" />
+                                <rect x="27.029" y="45.997" width="6.437" height="9.739" fill="none" stroke="#003c5b" stroke-miterlimit="10" stroke-width="0.781" />
+                            </g>
+                            <g id="windows">
+                                <rect x="40.185" y="24.603" width="5.542" height="0.994" fill="#0078b6" />
+                                <rect x="50.167" y="26.585" width="8.267" height="0.994" fill="#0078b6" />
+                                <rect x="40.185" y="37.26" width="5.542" height="0.994" fill="#0078b6" />
+                                <rect x="50.167" y="39.242" width="8.267" height="0.994" fill="#0078b6" />
+                                <rect x="40.185" y="49.866" width="5.542" height="0.994" fill="#0078b6" />
+                                <rect x="14.006" y="51.354" width="9.791" height="0.994" fill="#0078b6" />
+                                <rect x="27.029" y="43.783" width="6.437" height="0.994" fill="#0078b6" />
+                                <rect x="40.068" y="33.369" width="5.776" height="3.862" rx="0.025" ry="0.025" fill="#d7ebd4" />
+                                <rect x="40.068" y="20.741" width="5.776" height="3.862" rx="0.025" ry="0.025" fill="#d7ebd4" />
+                                <rect x="49.418" y="20.809" width="9.723" height="5.776" rx="0.04" ry="0.04" fill="#d7ebd4" />
+                                <rect x="49.418" y="33.403" width="9.723" height="5.776" rx="0.04" ry="0.04" fill="#d7ebd4" />
+                                <path d="M30.248,40.565a3.218,3.218,0,0,0-3.218,3.218h6.437A3.218,3.218,0,0,0,30.248,40.565Z" fill="#d7ebd4" />
+                                <path d="M18.9,41.869a4.312,4.312,0,0,0-4.346,4.278V49.2h8.691V46.146A4.312,4.312,0,0,0,18.9,41.869Z" fill="#d7ebd4" />
+                                <polygon points="45.727 35.759 40.185 34.955 40.185 33.961 45.727 33.961 45.727 35.759" fill="#fff" />
+                                <polygon points="45.727 23.131 40.185 22.327 40.185 21.333 45.727 21.333 45.727 23.131" fill="#fff" />
+                                <polygon points="59.141 36.291 49.461 34.955 49.461 33.961 59.141 33.961 59.141 36.291" fill="#fff" />
+                                <polygon points="59.141 23.849 49.461 22.513 49.461 21.52 59.141 21.52 59.141 23.849" fill="#fff" />
+                                <path d="M31.169,41.069a2.532,2.532,0,0,0-2.3,2.715h4.595A2.532,2.532,0,0,0,31.169,41.069Z" fill="#fff" />
+                                <path d="M19.908,42.657a3.6,3.6,0,0,0-3.338,3.817V49.2h6.675V46.474A3.6,3.6,0,0,0,19.908,42.657Z" fill="#fff" />
+                                <rect x="40.068" y="45.997" width="5.776" height="3.862" rx="0.025" ry="0.025" fill="#d7ebd4" />
+                                <polygon points="45.727 48.348 40.185 47.544 40.185 46.551 45.727 46.551 45.727 48.348" fill="#fff" />
+                            </g>
+                            <path id="existing-phase2to6" d="M62.8,17.945H36.033v-1.82H62.8ZM38.209,36.208H9.485v2.143H38.209Zm-9.658,0h8.827l-4.238-3.522H24.757Zm0,0-9.4-8.723-8.837,8.723H28.551M61.259,17.945H37.576V55.736H61.259ZM45.819,49.859H40.093a.025.025,0,0,1-.025-.025V46.022A.025.025,0,0,1,40.093,46h5.725a.025.025,0,0,1,.025.025v3.811A.025.025,0,0,1,45.819,49.859Zm0-12.628H40.093a.025.025,0,0,1-.025-.025V33.394a.025.025,0,0,1,.025-.025h5.725a.025.025,0,0,1,.025.025v3.811A.025.025,0,0,1,45.819,37.231Zm0-12.628H40.093a.025.025,0,0,1-.025-.025V20.766a.025.025,0,0,1,.025-.025h5.725a.025.025,0,0,1,.025.025v3.811A.025.025,0,0,1,45.819,24.6ZM59.1,26.585H49.458a.04.04,0,0,1-.04-.04v-5.7a.04.04,0,0,1,.04-.04H59.1a.04.04,0,0,1,.04.04v5.7A.04.04,0,0,1,59.1,26.585Zm0,12.594H49.458a.04.04,0,0,1-.04-.04v-5.7a.04.04,0,0,1,.04-.04H59.1a.04.04,0,0,1,.04.04v5.7A.04.04,0,0,1,59.1,39.179ZM36,55.736H11.422V38.351H36ZM33.466,43.783H27.029a3.218,3.218,0,1,1,6.437,0Zm-10.22,2.363V49.2H14.554V46.146a4.346,4.346,0,0,1,8.691,0Z" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                            <g id="top">
+                                <rect x="13.473" y="49.195" width="10.853" height="2.159" fill="#e6e6e6" />
+                                <rect x="13.473" y="49.195" width="10.853" height="2.159" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="48.973" y="19.464" width="11.332" height="1.87" fill="#e6e6e6" />
+                                <rect x="39.308" y="19.464" width="7.972" height="1.87" fill="#e6e6e6" />
+                                <rect x="48.973" y="32.1" width="11.332" height="1.861" fill="#e6e6e6" />
+                                <rect x="39.308" y="32.1" width="7.972" height="1.861" fill="#e6e6e6" />
+                                <rect x="39.308" y="44.64" width="8.022" height="1.95" fill="#e6e6e6" />
+                                <rect x="48.973" y="20.149" width="10.613" height="1.185" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="39.308" y="20.149" width="7.296" height="1.185" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="48.973" y="32.777" width="10.613" height="1.185" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="39.308" y="32.777" width="7.296" height="1.185" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="39.308" y="45.405" width="7.296" height="1.185" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
+                                <rect x="26.157" y="54.525" width="8.182" height="1.211" fill="#e6e6e6" />
+                                <rect x="26.157" y="54.525" width="8.182" height="1.211" fill="none" stroke="#003c5b" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.781" />
                             </g>
                         </g>
                     </svg>
-                    <span class="sim__data sim__data--overlay" id="dataExisting">2%</span>
+                    <span class="sim__data" id="dataExisting">2%</span>
                 </figure>
             </header>
         </section>
@@ -587,7 +648,7 @@
         <section class="sim">
             <header class="sim__header">
                 <h3><span class="sim__tooltip-trigger">Number of Electric Vehicles</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Non fossil-fuel powered (non-polluting) vehicles</span></h3>
-                <figure class="sim__icon sim__icon--overlay" role="presentation">
+                <figure class="sim__icon sim__icon--overlay" aria-hidden="true" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
                         <title>icon-number</title>
                         <g id="number">
@@ -749,14 +810,14 @@
                             </g>
                         </g>
                     </svg>
-                    <span class="sim__data sim__data--overlay" id="dataElectric">1,000</span>
+                    <span class="sim__data" id="dataElectric">1,000</span>
                 </figure>
             </header>
         </section>
         <section class="sim sim--nooverflow">
             <header class="sim__header">
                 <h3><span class="sim__tooltip-trigger">% of Trips by Active Transport or Transit</span><span class="sim__tooltip"><i class="sim__tooltip-icon" aria-hidden="true"><img src="/files/icon-info.svg"></i>Percentage of trips in the city that use modes of transportation such as walking, cycling, taking transit, etc.</span></h3>
-                <figure class="sim__icon sim__icon--overlay" role="presentation">
+                <figure class="sim__icon sim__icon--overlay" aria-hidden="true" role="presentation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
                         <title>icon-trips</title>
                         <g id="trips">
