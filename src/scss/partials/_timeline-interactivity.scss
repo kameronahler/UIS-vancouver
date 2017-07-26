@@ -4,65 +4,100 @@ Interactivity from timeline input range
 
 ==================================*/
 
+
 /*-----------------------------------------
 Permanent Attributes
 ------------------------------------------*/
-#total1,
+
+#total_v2,
 #existingphase1,
 #existingphase2,
 #existingphase3,
-#number {
-	transition: $transition-3 ease .5s;
-	transform-origin: 50% 50%;
+#number,
+#energy-one,
+#energy-two,
+#energy-three,
+#energy-four,
+#energy-five,
+#energy-six,
+#energy-seven,
+#energy-eight{
+    transition: $transition-3 ease .5s;
+    transform-origin: 50% 50%;
 }
-#existinggear{
-	transition: $transition-3 ease .5s;
-	transform-origin:50% 50% 0;
-	-moz-transform-origin:50% 82% 0;
+
+#existinggear {
+    transition: $transition-3 ease .5s;
+    transform-origin: 50% 50% 0;
+    -moz-transform-origin: 50% 82% 0;
 }
 
 #renewable1 {
-	transform-origin: 47.5% 54.5%;
-	-moz-transform-origin: 50% 41% 0;
+    transform-origin: 47.5% 54.5%;
+    -moz-transform-origin: 50% 41% 0;
+}
+
+#smoke {
+    transition: $transition-3 ease .5s;
+    transform-origin: 50% 100%;
+    -moz-transform-origin:50% 60% 0;
 }
 
 #new1,
 #new2,
 #new3 {
-	opacity: 0;
-	transition: $transition-3 ease .5s;
+    opacity: 0;
+    transition: $transition-3 ease .5s;
 }
 
 #number,
 #renewable1 {
-	animation: rotate infinite 0s linear .5s;
+    animation: rotate infinite 0s linear .5s;
 }
 
-#trips1, #trips2, #trips3, #trips4 {
-	opacity: 0;
-	transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	transition: $transition-3 ease .5s;
+#trips1,
+#trips2,
+#trips3,
+#trips4 {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transition: $transition-3 ease .5s;
 }
 
-#trips1, #trips3 {
-	transform: translate3d(50px, 0, 0);
+#trips1,
+#trips3 {
+    transform: translate(50px, 0);
 }
 
-#trips2, #trips4 {
-	transform: translate3d(-50px, 0, 0);
+#trips2,
+#trips4 {
+    transform: translate(-50px, 0);
 }
 
-#chord, #plug {
-	transition: $transition-3 ease .5s;
+#chord,
+#plug {
+    transition: $transition-3 ease .5s;
 }
 
 #plug {
-	transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
 }
 
 #chord {
-	stroke-dasharray: 75pxi;
+    stroke-dasharray: 75pxi;
+}
+
+
+#population-two,
+#population-three,
+#population-four,
+#population-five,
+#population-six,
+#population-seven,
+#population-eight{
+    transition: $transition-3 ease .5s;
+    transform-origin: 50% 50%;
+    opacity:0
 }
 
 
@@ -71,428 +106,484 @@ Permanent Attributes
 ------------------------------------------*/
 
 [data-year="2015"] {
-	.sim__data {
-		color: $color-cycle-bad-1;
-	}
-	.sim__icon {
-		#dataPopulation, &--population {
-			transform: scale(.5);
-			opacity: .5;
-		}
-		&--carbon {
-			transform: scale(1);
-			opacity: 1;
-		}
-	}
-	#total1 {
-		transform: scale(1);
-	}
-	#renewable1, #number {
-		animation-duration: 0s;
-	}
-	#trips4 {
-		opacity: .25;
-	}
+    .sim__data {
+        color: $color-cycle-bad-1;
+    }
+    #renewable1,
+    #number {
+        animation-duration: 0s;
+    }
+    #trips4 {
+        opacity: .25;
+    }
+    #smoke {
+        opacity: 1;
+        transform: scale(1)
+    }
 }
+
 
 
 /*-----------------------------------------
 2020 Phase 2
 ------------------------------------------*/
+
 [data-year="2020"] {
-	.sim__data {
-		color: $color-cycle-bad-2;
-	}
-	.sim__icon {
-		&--population {
-			transform: scale(.5625);
-			opacity: .5625;
-		}
-		&--carbon {
-			transform: scale(.9375);
-			opacity: .9375;
-		}
-	}
-	#total1 {
-		transform: scale(.9375);
-	}
-	#renewable1, #number {
-		animation-duration: 14s;
-	}
-	#new1 {
-		opacity: .33;
-	}
-	#existingphase3 {
-		fill: #59b248;
-	}
-	#trips4 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#plug {
-		transform: translate3d(12pxi, 0, 0);
-	}
-	#chord {
-		stroke-dashoffset: 12pxi;
-	}
+    .sim__data {
+        color: $color-cycle-bad-2;
+    }
+    #total_v2 {
+        transform: scale(.9375);
+    }
+    #renewable1,
+    #number {
+        animation-duration: 14s;
+    }
+    #new1 {
+        opacity: .33;
+    }
+    #existingphase3 {
+        fill: #59b248;
+    }
+    #trips4 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #plug {
+        transform: translate(12pxi, 0);
+    }
+    #chord {
+        stroke-dashoffset: 12pxi;
+    }
+    #smoke {
+        opacity: .9;
+        transform: scale(.95)
+    }
+    #energy-one{
+        opacity:0;
+    }
+    #population-two{
+        opacity:1
+    }
 }
+
 
 
 /*-----------------------------------------
 2025 Phase 3
 ------------------------------------------*/
+
 [data-year="2025"] {
-	.sim__data {
-		color: $color-cycle-bad-3;
-	}
-	.sim__icon {
-		&--population {
-			transform: scale(.625);
-			opacity: .625;
-		}
-		&--carbon {
-			transform: scale(.875);
-			opacity: .875;
-		}
-	}
-	#total1 {
-		transform: scale(.875);
-	}
-	#renewable1, #number {
-		animation-duration: 12s;
-	}
-	#new1 {
-		opacity: .66;
-	}
-	#existingphase3 {
-		fill: #59b248;
-	}
-	#existingphase2 {
-		fill: #379a28;
-	}
-	#trips4 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips3 {
-		opacity: 1;
-	}
-	#plug {
-		transform: translate3d(18pxi, 0, 0);
-	}
-	#chord {
-		stroke-dashoffset: 18pxi;
-	}
+    .sim__data {
+        color: $color-cycle-bad-3;
+    }
+    #total_v2 {
+        transform: scale(.875);
+    }
+    #renewable1,
+    #number {
+        animation-duration: 12s;
+    }
+    #new1 {
+        opacity: .66;
+    }
+    #existingphase3 {
+        fill: #59b248;
+    }
+    #existingphase2 {
+        fill: #379a28;
+    }
+    #trips4 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips3 {
+        opacity: 1;
+    }
+    #plug {
+        transform: translate(18pxi, 0);
+    }
+    #chord {
+        stroke-dashoffset: 18pxi;
+    }
+    #smoke {
+        opacity: .8;
+        transform: scale(.9)
+    }
+    #energy-one,
+    #energy-two{
+        opacity:0;
+    }
+    #population-two,
+    #population-three{
+        opacity:1
+    }
+
 }
+
 
 
 /*-----------------------------------------
 2030 Phase 4
 ------------------------------------------*/
+
 [data-year="2030"] {
-	.sim__data {
-		color: $color-cycle-bad-4;
-	}
-	.sim__icon {
-		&--population {
-			transform: scale(.6875);
-			opacity: .6875;
-		}
-		&--carbon {
-			transform: scale(.8125);
-			opacity: .8125;
-		}
-	}
-	#total1 {
-		transform: scale(.8125);
-	}
-	#renewable1, #number {
-		animation-duration: 10s;
-	}
-	#new1 {
-		opacity: 1;
-	}
-	#existingphase3 {
-		fill: #59b248;
-	}
-	#existingphase2 {
-		fill: #379a28;
-	}
-	#existingphase1 {
-		fill: #1b7600;
-	}
-	#trips4 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips3 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#plug {
-		transform: translate3d(24pxi, 0, 0);
-	}
-	#chord {
-		stroke-dashoffset: 24pxi;
-	}
+    .sim__data {
+        color: $color-cycle-bad-4;
+    }
+    #total_v2 {
+        transform: scale(.8125);
+    }
+    #renewable1,
+    #number {
+        animation-duration: 10s;
+    }
+    #new1 {
+        opacity: 1;
+    }
+    #existingphase3 {
+        fill: #59b248;
+    }
+    #existingphase2 {
+        fill: #379a28;
+    }
+    #existingphase1 {
+        fill: #1b7600;
+    }
+    #trips4 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips3 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #plug {
+        transform: translate(24pxi, 0);
+    }
+    #chord {
+        stroke-dashoffset: 24pxi;
+    }
+    #smoke {
+        opacity: .7;
+        transform: scale(.85)
+    }
+    #energy-one,
+    #energy-two,
+    #energy-three{
+        opacity:0;
+    }
+    #population-two,
+    #population-three,
+    #population-four{
+        opacity:1
+    }
 }
+
 
 
 /*-----------------------------------------
 2035 Phase 5
 ------------------------------------------*/
+
 [data-year="2035"] {
-	.sim__data {
-		color: $color-cycle-bad-5;
-	}
-	.sim__icon {
-		&--population {
-			transform: scale(.75);
-			opacity: .75;
-		}
-		&--carbon {
-			transform: scale(.75);
-			opacity: .75;
-		}
-	}
-	#total1 {
-		transform: scale(.75);
-	}
-	#renewable1, #number {
-		animation-duration: 8s;
-	}
-	#new1 {
-		opacity: 1;
-	}
-	#new2 {
-		opacity: .33;
-	}
-	#existingphase3 {
-		fill: #59b248;
-	}
-	#existingphase2 {
-		fill: #379a28;
-	}
-	#existingphase1 {
-		fill: #1b7600;
-	}
-	#existinggear {
-		transform: scale(1.1);
-	}
-	#trips4 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips3 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips2 {
-		opacity: 1;
-	}
-	#plug {
-		transform: translate3d(30pxi, 0, 0);
-	}
-	#chord {
-		stroke-dashoffset: 30pxi;
-	}
+    .sim__data {
+        color: $color-cycle-bad-5;
+    }
+    #total_v2 {
+        transform: scale(.75);
+    }
+    #renewable1,
+    #number {
+        animation-duration: 8s;
+    }
+    #new1 {
+        opacity: 1;
+    }
+    #new2 {
+        opacity: .33;
+    }
+    #existingphase3 {
+        fill: #59b248;
+    }
+    #existingphase2 {
+        fill: #379a28;
+    }
+    #existingphase1 {
+        fill: #1b7600;
+    }
+    #existinggear {
+        transform: scale(1.1);
+    }
+    #trips4 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips3 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips2 {
+        opacity: 1;
+    }
+    #plug {
+        transform: translate(30pxi, 0);
+    }
+    #chord {
+        stroke-dashoffset: 30pxi;
+    }
+    #smoke {
+        opacity: .6;
+        transform: scale(.8)
+    }
+    #energy-one,
+    #energy-two,
+    #energy-three,
+    #energy-four{
+        opacity:0;
+    }
+    #population-two,
+    #population-three,
+    #population-four,
+    #population-five{
+        opacity:1
+    }
 }
+
 
 
 /*-----------------------------------------
 2040 Phase 6
 ------------------------------------------*/
+
 [data-year="2040"] {
-	.sim__data {
-		color: $color-cycle-bad-6;
-	}
-	.sim__icon {
-		&--population {
-			transform: scale(.8125);
-			opacity: .8125;
-		}
-		&--carbon {
-			transform: scale(.6875);
-			opacity: .6875;
-		}
-	}
-	#total1 {
-		transform: scale(.6875);
-	}
-	#renewable1, #number {
-		animation-duration: 6s;
-	}
-	#new1 {
-		opacity: 1;
-	}
-	#new2 {
-		opacity: 1;
-	}
-	#existingphase3 {
-		fill: #59b248;
-	}
-	#existingphase2 {
-		fill: #379a28;
-	}
-	#existingphase1 {
-		fill: #1b7600;
-	}
-	#existinggear {
-		transform: scale(1.2);
-	}
-	#trips4 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips3 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips2 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#plug {
-		transform: translate3d(36pxi, 0, 0);
-	}
-	#chord {
-		stroke-dashoffset: 36pxi;
-	}
+    .sim__data {
+        color: $color-cycle-bad-6;
+    }
+    #total_v2 {
+        transform: scale(.6875);
+    }
+    #renewable1,
+    #number {
+        animation-duration: 6s;
+    }
+    #new1 {
+        opacity: 1;
+    }
+    #new2 {
+        opacity: 1;
+    }
+    #existingphase3 {
+        fill: #59b248;
+    }
+    #existingphase2 {
+        fill: #379a28;
+    }
+    #existingphase1 {
+        fill: #1b7600;
+    }
+    #existinggear {
+        transform: scale(1.2);
+    }
+    #trips4 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips3 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips2 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #plug {
+        transform: translate(36pxi, 0);
+    }
+    #chord {
+        stroke-dashoffset: 36pxi;
+    }
+    #smoke {
+        opacity: .5;
+        transform: scale(.75)
+    }
+    #energy-one,
+    #energy-two,
+    #energy-three,
+    #energy-four,
+    #energy-five{
+        opacity:0;
+    }
+    #population-two,
+    #population-three,
+    #population-four,
+    #population-five,
+    #population-six{
+        opacity:1
+    }
 }
+
 
 
 /*-----------------------------------------
 2045 Phase 7
 ------------------------------------------*/
+
 [data-year="2045"] {
-	.sim__data {
-		color: $color-cycle-bad-7;
-	}
-	.sim__icon {
-		&--population {
-			transform: scale(.875);
-			opacity: .875;
-		}
-		&--carbon {
-			transform: scale(.6125);
-			opacity: .6125;
-		}
-	}
-	#total1 {
-		transform: scale(.6125);
-	}
-	#renewable1, #number {
-		animation-duration: 4s;
-	}
-	#new1 {
-		opacity: 1;
-	}
-	#new2 {
-		opacity: 1;
-	}
-	#new3 {
-		opacity: .33;
-	}
-	#existingphase3 {
-		fill: #59b248;
-	}
-	#existingphase2 {
-		fill: #379a28;
-	}
-	#existingphase1 {
-		fill: #1b7600;
-	}
-	#existinggear {
-		transform: scale(1.3);
-	}
-	#trips4 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips3 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips2 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips1 {
-		opacity: 1;
-	}
-	#plug {
-		transform: translate3d(42pxi, 0, 0);
-	}
-	#chord {
-		stroke-dashoffset: 42pxi;
-	}
+    .sim__data {
+        color: $color-cycle-bad-7;
+    }
+    #total_v2 {
+        transform: scale(.6125);
+    }
+    #renewable1,
+    #number {
+        animation-duration: 4s;
+    }
+    #new1 {
+        opacity: 1;
+    }
+    #new2 {
+        opacity: 1;
+    }
+    #new3 {
+        opacity: .33;
+    }
+    #existingphase3 {
+        fill: #59b248;
+    }
+    #existingphase2 {
+        fill: #379a28;
+    }
+    #existingphase1 {
+        fill: #1b7600;
+    }
+    #existinggear {
+        transform: scale(1.3);
+    }
+    #trips4 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips3 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips2 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips1 {
+        opacity: 1;
+    }
+    #plug {
+        transform: translate(42pxi, 0);
+    }
+    #chord {
+        stroke-dashoffset: 42pxi;
+    }
+    #smoke {
+        opacity: .4;
+        transform: scale(.7)
+    }
+    #energy-one,
+    #energy-two,
+    #energy-three,
+    #energy-four,
+    #energy-five,
+    #energy-six{
+        opacity:0;
+    }
+    #population-two,
+    #population-three,
+    #population-four,
+    #population-five,
+    #population-six,
+    #population-seven{
+        opacity:1
+    }
 }
+
 
 
 /*-----------------------------------------
 2050 Phase 8
 ------------------------------------------*/
+
 [data-year="2050"] {
-	.sim__data {
-		color: $color-cycle-bad-8;
-	}
-	.sim__icon {
-		&--population {
-			transform: scale(1);
-			opacity: 1;
-		}
-		&--carbon {
-			transform: scale(.5);
-			opacity: .5;
-		}
-	}
-	#total1 {
-		transform: scale(.5);
-	}
-	#renewable1, #number {
-		animation-duration: 2s;
-	}
-	#new1 {
-		opacity: 1;
-	}
-	#new2 {
-		opacity: 1;
-	}
-	#new3 {
-		opacity: 1;
-	}
-	#existingphase3 {
-		fill: #59b248;
-	}
-	#existingphase2 {
-		fill: #379a28;
-	}
-	#existingphase1 {
-		fill: #1b7600;
-	}
-	#existinggear {
-		transform: scale(1.4);
-	}
-	#trips4 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips3 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips2 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#trips1 {
-		transform: translate3d(0, 0, 0);
-		opacity: 1;
-	}
-	#plug {
-		transform: translate3d(48pxi, 0, 0);
-	}
-	#chord {
-		stroke-dashoffset: 48pxi;
-	}
+    .sim__data {
+        color: $color-cycle-bad-8;
+    }
+    #total_v2 {
+        transform: scale(.5);
+    }
+    #renewable1,
+    #number {
+        animation-duration: 2s;
+    }
+    #new1 {
+        opacity: 1;
+    }
+    #new2 {
+        opacity: 1;
+    }
+    #new3 {
+        opacity: 1;
+    }
+    #existingphase3 {
+        fill: #59b248;
+    }
+    #existingphase2 {
+        fill: #379a28;
+    }
+    #existingphase1 {
+        fill: #1b7600;
+    }
+    #existinggear {
+        transform: scale(1.4);
+    }
+    #trips4 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips3 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips2 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #trips1 {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    #plug {
+        transform: translate(48pxi, 0);
+    }
+    #chord {
+        stroke-dashoffset: 48pxi;
+    }
+    #smoke {
+        opacity: .3;
+        transform: scale(.65)
+    }
+    #energy-one,
+    #energy-two,
+    #energy-three,
+    #energy-four,
+    #energy-five,
+    #energy-six,
+    #energy-seven{
+        opacity:0;
+    }
+    #population-two,
+    #population-three,
+    #population-four,
+    #population-five,
+    #population-six,
+    #population-seven,
+    #population-eight{
+        opacity:1
+    }
 }

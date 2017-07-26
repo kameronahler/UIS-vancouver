@@ -55,7 +55,7 @@ function yearChange(){
 		dataExisting.textContent = "2%";
 		dataElectric.textContent = "1,000";
 		dataMode.textContent = "50%";
-		dataEnergy.textContent = "$1,216";
+		dataEnergy.textContent = "$1,270";
 	} 
 	
 	// 2020
@@ -73,7 +73,7 @@ function yearChange(){
 		dataExisting.textContent = "20%";
 		dataElectric.textContent = "10,000";
 		dataMode.textContent = "58%";
-		dataEnergy.textContent = "$1,192";
+		dataEnergy.textContent = "$1,263";
 	}
 	
 	// 2025
@@ -91,7 +91,7 @@ function yearChange(){
 		dataExisting.textContent = "35%";
 		dataElectric.textContent = "20,000";
 		dataMode.textContent = "62%";
-		dataEnergy.textContent = "$1,187";
+		dataEnergy.textContent = "$1,256";
 	}
 	
 	// 2030
@@ -109,7 +109,7 @@ function yearChange(){
 		dataExisting.textContent = "50%";
 		dataElectric.textContent = "30,000";
 		dataMode.textContent = "65%";
-		dataEnergy.textContent = "$1,176";
+		dataEnergy.textContent = "$1,253";
 	}
 	
 	// 2035
@@ -127,7 +127,7 @@ function yearChange(){
 		dataExisting.textContent = "60%";
 		dataElectric.textContent = "50,000";
 		dataMode.textContent = "66%";
-		dataEnergy.textContent = "$1,179";
+		dataEnergy.textContent = "$1,251";
 	}
 	
 	// 2040
@@ -145,7 +145,7 @@ function yearChange(){
 		dataExisting.textContent = "70%";
 		dataElectric.textContent = "80,000";
 		dataMode.textContent = "67%";
-		dataEnergy.textContent = "$1,161";
+		dataEnergy.textContent = "$1,248";
 	}
 
 	// 2045
@@ -163,7 +163,7 @@ function yearChange(){
 		dataExisting.textContent = "80%";
 		dataElectric.textContent = "100,000";
 		dataMode.textContent = "68%";
-		dataEnergy.textContent = "$1,121";
+		dataEnergy.textContent = "$1,246";
 	}
 
 	// 2050
@@ -179,9 +179,9 @@ function yearChange(){
 		dataCarbon.textContent = "80%";
 		dataNew.textContent = "100%";
 		dataExisting.textContent = "100%";
-		dataElectric.textContent = "150,000";
+		dataElectric.textContent = "130,000";
 		dataMode.textContent = "70%";
-		dataEnergy.textContent = "$1,102";
+		dataEnergy.textContent = "$1,216";
 	} else {
 		return false;
 	}

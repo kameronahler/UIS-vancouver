@@ -49,6 +49,7 @@ intro styling
             padding: 1.5em;
             @include flex;
             flex-wrap: wrap;
+            width:90%;
         }
 
         h3 {

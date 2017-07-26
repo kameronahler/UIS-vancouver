@@ -2,10 +2,10 @@
 vars explained
 ----------------------------------*/
 // main nav text color, homepage timeline header and footer background color, individual page h1s, banner background colors, participate card header background colors
-$color-primary: $color-1;
+$color-primary: #2b76af;
 
 // button colors – intended for white text
-$color-secondary: $color-2;
+$color-secondary: #53822f;
 
 // block title colors for homepage and sidebars – need to be darker because they are on a gray background
 $color-home-block-h2: darken($color-primary,5%);

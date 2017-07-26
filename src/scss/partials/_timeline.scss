@@ -125,7 +125,7 @@ Row
 	}
 	.button{
 		font-size:20px;
-		margin-bottom:16px * 2;
+		margin-bottom:32px;
 		background:$color-2;
 		padding:.5em 2em;
 	}
@@ -134,7 +134,7 @@ Row
 
 // individual sections
 .sim {
-	background:linear-gradient(170deg, lighten($color-1,60%), #fff);
+	background:linear-gradient(170deg, #fff 0%, lighten($color-1,50%) 100%);
 
 	// 100% for xs
 	width: 100%;
@@ -146,7 +146,7 @@ Row
 		width: 50%;
 	}
 	@include bp(lg) {
-		padding:1.5em;
+		padding:3em 1.5em 1.5em;
 	}
 	
 	// for top section that isn't 50/50
@@ -168,13 +168,12 @@ Row
 
 		h3 {
 			display: inline-block;
-			width: 80%;
 			position: relative;
 			margin: 0 auto 1rem;
 			text-align: center;
 			color: #333;
 			text-shadow: $text-shadow-1;
-			min-height: 46px;
+			min-height: 77px;
 			line-height: 1.3333;
 			font-size:20px;
 			z-index:3;
@@ -192,7 +191,7 @@ Row
 
 			&::before {
 				opacity: 1;
-				transform: translate3d(-50%, -2em, 0);
+				transform: translate(-50%, -2em);
 				transition: $transition-1 ease-out .2s;
 			}
 		}
@@ -202,7 +201,7 @@ Row
 			}
 			& ~ .sim__tooltip {
 				opacity: 1;
-				transform: translate3d(-50%, calc(100% - 1em), 0);
+				transform: translate(-50%, calc(100% - 1em));
 				transition: .5s ease-out .2s;
 			}
 		}
@@ -213,7 +212,7 @@ Row
 		@include absolute(null,50%,null,-2em);
 		display: block;
 		width: 100%;
-		transform: translate3d(-50%, 100%, 0);
+		transform: translate(-50%, 100%);
 		padding: 1rem;
 		background: $color-1;
 		transition: .2s ease;
