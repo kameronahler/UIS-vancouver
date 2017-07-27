@@ -9,8 +9,7 @@ Interactivity from timeline input range
 Permanent Attributes
 ------------------------------------------*/
 
-#total_v2,
-#number,
+#total_v2
 #energy-one,
 #energy-two,
 #energy-three,
@@ -22,11 +21,26 @@ Permanent Attributes
 #existing-phase6,
 #existing-phase7,
 #existing-phase8,
-#energy-eight{
+#energy-eight,
+#number-one,
+#number-two,
+#number-three,
+#number-four,
+#number-five,
+#number-six,
+#number-seven,
+#number-eight,
+#trips1,
+#trips2,
+#trips3,
+#trips4,
+#trips5,
+#trips6,
+#trips7,
+#trips8{
     transition: $transition-3 ease .5s;
     transform-origin: 50% 50%;
 }
-
 
 #renewable1 {
     transform-origin: 47.5% 54.5%;
@@ -46,28 +60,8 @@ Permanent Attributes
     transition: $transition-3 ease .5s;
 }
 
-#number,
 #renewable1 {
     animation: rotate infinite 0s linear .5s;
-}
-
-#trips1,
-#trips2,
-#trips3,
-#trips4 {
-    opacity: 0;
-    transform-origin: 50% 50%;
-    transition: $transition-3 ease .5s;
-}
-
-#trips1,
-#trips3 {
-    transform: translate(50px, 0);
-}
-
-#trips2,
-#trips4 {
-    transform: translate(-50px, 0);
 }
 
 #chord,
@@ -83,7 +77,6 @@ Permanent Attributes
     stroke-dasharray: 75pxi;
 }
 
-
 #population-two,
 #population-three,
 #population-four,
@@ -96,6 +89,32 @@ Permanent Attributes
     opacity:0
 }
 
+#number-two,
+#number-three,
+#number-four,
+#number-five,
+#number-six,
+#number-seven,
+#number-eight{
+    opacity:0;
+    transform:translate(0,-1em);
+}
+
+#trips2,
+#trips3,
+#trips4,
+#trips5,
+#trips6,
+#trips7,
+#trips8{
+    transform:translate(-1em,0);
+    opacity:0;
+}
+
+#trips1{
+    transform:translate(-50%,0);
+    opacity:.5;
+}
 
 /*-----------------------------------------
 2015 Phase 1
@@ -105,16 +124,16 @@ Permanent Attributes
     .sim__data {
         color: $color-cycle-bad-1;
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 0s;
-    }
-    #trips4 {
-        opacity: .25;
     }
     #smoke {
         opacity: 1;
         transform: scale(1)
+    }
+    #trips1{
+        transform:translate(-50%,0);
+        opacity:.5;
     }
 }
 
@@ -129,16 +148,11 @@ Permanent Attributes
     #total_v2 {
         transform: scale(.9375);
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 14s;
     }
     #new1 {
         opacity: .33;
-    }
-    #trips4 {
-        transform: translate(0, 0);
-        opacity: 1;
     }
     #plug {
         transform: translate(12pxi, 0);
@@ -159,6 +173,14 @@ Permanent Attributes
     #existing-phase2to6{
         stroke:#406d52;
     }
+    #number-two{
+        opacity:1;
+        transform:translate(0,0);
+    }
+    #trips1{
+        transform:translate(0,0);
+        opacity:1;
+    }
 }
 
 
@@ -174,19 +196,11 @@ Permanent Attributes
     #total_v2 {
         transform: scale(.875);
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 12s;
     }
     #new1 {
         opacity: .66;
-    }
-    #trips4 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips3 {
-        opacity: 1;
     }
     #plug {
         transform: translate(18pxi, 0);
@@ -211,6 +225,16 @@ Permanent Attributes
         stroke:darken($color-2,15%);
         stroke-width:1;
     }
+    #number-two,
+    #number-three{
+        opacity:1;
+        transform:translate(0,0);
+    }
+    #trips1,
+    #trips2{
+        transform:translate(0,0);
+        opacity:1;
+    }
 }
 
 
@@ -226,19 +250,10 @@ Permanent Attributes
     #total_v2 {
         transform: scale(.8125);
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 10s;
     }
     #new1 {
-        opacity: 1;
-    }
-    #trips4 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips3 {
-        transform: translate(0, 0);
         opacity: 1;
     }
     #plug {
@@ -265,6 +280,18 @@ Permanent Attributes
         stroke:darken($color-2,15%);
         stroke-width:1.125;
     }
+    #number-two,
+    #number-three,
+    #number-four{
+        opacity:1;
+        transform:translate(0,0);
+    }
+    #trips1,
+    #trips2,
+    #trips3{
+        transform:translate(0,0);
+        opacity:1;
+    }
 }
 
 
@@ -280,8 +307,7 @@ Permanent Attributes
     #total_v2 {
         transform: scale(.75);
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 8s;
     }
     #new1 {
@@ -289,17 +315,6 @@ Permanent Attributes
     }
     #new2 {
         opacity: .33;
-    }
-    #trips4 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips3 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips2 {
-        opacity: 1;
     }
     #plug {
         transform: translate(30pxi, 0);
@@ -327,6 +342,20 @@ Permanent Attributes
         stroke:darken($color-2,15%);
         stroke-width:1.25;
     }
+    #number-two,
+    #number-three,
+    #number-four,
+    #number-five{
+        opacity:1;
+        transform:translate(0,0);
+    }
+    #trips1,
+    #trips2,
+    #trips3,
+    #trips4{
+        transform:translate(0,0);
+        opacity:1;
+    }
 }
 
 
@@ -342,26 +371,13 @@ Permanent Attributes
     #total_v2 {
         transform: scale(.6875);
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 6s;
     }
     #new1 {
         opacity: 1;
     }
     #new2 {
-        opacity: 1;
-    }
-    #trips4 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips3 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips2 {
-        transform: translate(0, 0);
         opacity: 1;
     }
     #plug {
@@ -395,6 +411,22 @@ Permanent Attributes
     #existing-phase6{
         opacity:0;
     }
+    #number-two,
+    #number-three,
+    #number-four,
+    #number-five,
+    #number-six{
+        opacity:1;
+        transform:translate(0,0);
+    }
+    #trips1,
+    #trips2,
+    #trips3,
+    #trips4,
+    #trips5{
+        transform:translate(0,0);
+        opacity:1;
+    }
 }
 
 
@@ -410,8 +442,7 @@ Permanent Attributes
     #total_v2 {
         transform: scale(.6125);
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 4s;
     }
     #new1 {
@@ -422,21 +453,6 @@ Permanent Attributes
     }
     #new3 {
         opacity: .33;
-    }
-    #trips4 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips3 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips2 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips1 {
-        opacity: 1;
     }
     #plug {
         transform: translate(42pxi, 0);
@@ -474,6 +490,24 @@ Permanent Attributes
     #existing-phase7{
         opacity:0;
     }
+    #number-two,
+    #number-three,
+    #number-four,
+    #number-five,
+    #number-six,
+    #number-seven{
+        opacity:1;
+        transform:translate(0,0);
+    }
+    #trips1,
+    #trips2,
+    #trips3,
+    #trips4,
+    #trips5,
+    #trips6{
+        transform:translate(0,0);
+        opacity:1;
+    }
 }
 
 
@@ -489,8 +523,7 @@ Permanent Attributes
     #total_v2 {
         transform: scale(.5);
     }
-    #renewable1,
-    #number {
+    #renewable1 {
         animation-duration: 2s;
     }
     #new1 {
@@ -500,22 +533,6 @@ Permanent Attributes
         opacity: 1;
     }
     #new3 {
-        opacity: 1;
-    }
-    #trips4 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips3 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips2 {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    #trips1 {
-        transform: translate(0, 0);
         opacity: 1;
     }
     #plug {
@@ -558,5 +575,26 @@ Permanent Attributes
     }
     #existing-phase8{
         opacity:0;
+    }
+    #number-two,
+    #number-three,
+    #number-four,
+    #number-five,
+    #number-six,
+    #number-seven,
+    #number-eight{
+        opacity:1;
+        transform:translate(0,0);
+    }
+    #trips1,
+    #trips2,
+    #trips3,
+    #trips4,
+    #trips5,
+    #trips6,
+    #trips7,
+    #trips8{
+        transform:translate(0,0);
+        opacity:1;
     }
 }
