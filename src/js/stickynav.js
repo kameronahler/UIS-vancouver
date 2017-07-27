@@ -12,7 +12,7 @@ jQuery(function(){
     	};
     
     jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() >= 65) {
+        if (jQuery(this).scrollTop() >= 115) {
             navIsSticky();
         } else {
             navIsNotSticky();
