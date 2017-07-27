@@ -1,0 +1,171 @@
+/* ===============================
+
+Home
+
+================================= */
+.page-node-20{
+	.breadcrumb,
+	#page-title{
+		display:none;
+	}
+}
+
+.home-intro{
+
+	section:nth-child(1){
+		margin-bottom:3em;
+
+		@include bp(lg){
+			@include flex(space-between, flex-start);
+			flex-wrap:wrap;
+			margin-bottom:1.5em;
+		}
+
+		p{
+			@include bp(lg){
+				height:100%;
+				width:30%;
+				padding:4px;
+			}
+		}
+	}
+
+	header{
+		@include bp(lg){
+			width:100%;
+		}
+	}
+
+	h1{
+		position:relative;
+		text-align:center;
+		padding: 2em 0;
+		color:#fff;
+		z-index:2;
+
+		@include bp(md){
+			padding:3em 0;
+			margin-bottom:1.2em;
+		}
+
+		@include bp(md){
+			padding:4em 0;
+		}
+
+		&::before{
+			content:"";
+			@include absolute(0,0);
+			display:block;
+			width:100%;
+			height:100%;
+			background: linear-gradient(15deg, lighten($color-1,0%), lighten($color-2,30%));
+			z-index:-1;
+		}
+		&::after{
+			content:"";
+			@include absolute(0,0);
+			display:block;
+			width:100%;
+			height:100%;
+			background: transparent url('/files/home.jpg') no-repeat 50%;
+			background-size:cover;
+			z-index:-1;
+			opacity:.2;
+		}
+	}
+
+
+	section:nth-child(2){
+		padding:2em 1em;
+        background: linear-gradient(15deg, $color-1, lighten($color-1, 5%));
+		margin:0 auto;
+
+		@include bp(md){
+			padding:2em 3em;
+			box-shadow:$box-shadow-3;
+		}
+
+		@include bp(lg){
+			width:90%;
+		}
+
+		header{
+			text-align:center;
+			color:#fff;
+			margin-bottom:1.2em;
+		}
+
+		h2{
+			border-radius:2px;
+			padding:1em;
+		}
+
+		p{
+			color:#fff;
+		}
+
+		ul{
+			color:#fff;
+			list-style:none;
+			margin-left:0;
+			padding-left:0;
+
+			&:nth-of-type(2){
+				@include bp(md){
+					flex-wrap:wrap;
+					@include flex(center,center);
+				}
+			}
+		}
+		li{
+			@include bp(md){
+				text-align:center;
+			}
+		}
+		.header{
+			font-family:$font-2;
+			text-align:center;
+			margin-bottom:1.2em;
+
+			@include bp(md){
+				width:100%;
+			}
+
+			@include bp(lg){
+				margin: 1.2em 0;
+			}
+		}
+
+		.button{
+			display:block;
+			width:75%;
+			text-align:center;
+			margin:0 auto 1.5em;
+			padding:10px 20px;
+			box-shadow:$box-shadow-4;
+
+			@include bp(md){
+				display:inline-block;
+				width:auto;
+				margin:0 1em;
+			}
+		}
+	}
+}
+/* ------------------------------
+Interactive Graphic
+-------------------------------- */
+// DOESN'T WORK BECAUSE OF STUPID STYLING INSIDE THING LINK
+
+// .home-thinglink{
+	// .field-item.item1{
+	// 	position:relative;
+	// 	padding-left:0;
+	// 	padding-right:0;
+	// 	padding-top: (540/896) * 100%;
+	// }
+	// iframe{
+	// 	@include absolute(0,0);
+	// 	width:100%;
+	// }
+// }

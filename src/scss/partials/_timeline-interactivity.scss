@@ -10,9 +10,6 @@ Permanent Attributes
 ------------------------------------------*/
 
 #total_v2,
-#existingphase1,
-#existingphase2,
-#existingphase3,
 #number,
 #energy-one,
 #energy-two,
@@ -21,16 +18,15 @@ Permanent Attributes
 #energy-five,
 #energy-six,
 #energy-seven,
+#existing-phase2to6,
+#existing-phase6,
+#existing-phase7,
+#existing-phase8,
 #energy-eight{
     transition: $transition-3 ease .5s;
     transform-origin: 50% 50%;
 }
 
-#existinggear {
-    transition: $transition-3 ease .5s;
-    transform-origin: 50% 50% 0;
-    -moz-transform-origin: 50% 82% 0;
-}
 
 #renewable1 {
     transform-origin: 47.5% 54.5%;
@@ -122,8 +118,6 @@ Permanent Attributes
     }
 }
 
-
-
 /*-----------------------------------------
 2020 Phase 2
 ------------------------------------------*/
@@ -141,9 +135,6 @@ Permanent Attributes
     }
     #new1 {
         opacity: .33;
-    }
-    #existingphase3 {
-        fill: #59b248;
     }
     #trips4 {
         transform: translate(0, 0);
@@ -164,6 +155,9 @@ Permanent Attributes
     }
     #population-two{
         opacity:1
+    }
+    #existing-phase2to6{
+        stroke:#406d52;
     }
 }
 
@@ -186,12 +180,6 @@ Permanent Attributes
     }
     #new1 {
         opacity: .66;
-    }
-    #existingphase3 {
-        fill: #59b248;
-    }
-    #existingphase2 {
-        fill: #379a28;
     }
     #trips4 {
         transform: translate(0, 0);
@@ -219,6 +207,10 @@ Permanent Attributes
         opacity:1
     }
 
+    #existing-phase2to6{
+        stroke:darken($color-2,15%);
+        stroke-width:1;
+    }
 }
 
 
@@ -240,15 +232,6 @@ Permanent Attributes
     }
     #new1 {
         opacity: 1;
-    }
-    #existingphase3 {
-        fill: #59b248;
-    }
-    #existingphase2 {
-        fill: #379a28;
-    }
-    #existingphase1 {
-        fill: #1b7600;
     }
     #trips4 {
         transform: translate(0, 0);
@@ -278,6 +261,10 @@ Permanent Attributes
     #population-four{
         opacity:1
     }
+    #existing-phase2to6{
+        stroke:darken($color-2,15%);
+        stroke-width:1.125;
+    }
 }
 
 
@@ -302,18 +289,6 @@ Permanent Attributes
     }
     #new2 {
         opacity: .33;
-    }
-    #existingphase3 {
-        fill: #59b248;
-    }
-    #existingphase2 {
-        fill: #379a28;
-    }
-    #existingphase1 {
-        fill: #1b7600;
-    }
-    #existinggear {
-        transform: scale(1.1);
     }
     #trips4 {
         transform: translate(0, 0);
@@ -348,6 +323,10 @@ Permanent Attributes
     #population-five{
         opacity:1
     }
+    #existing-phase2to6{
+        stroke:darken($color-2,15%);
+        stroke-width:1.25;
+    }
 }
 
 
@@ -372,18 +351,6 @@ Permanent Attributes
     }
     #new2 {
         opacity: 1;
-    }
-    #existingphase3 {
-        fill: #59b248;
-    }
-    #existingphase2 {
-        fill: #379a28;
-    }
-    #existingphase1 {
-        fill: #1b7600;
-    }
-    #existinggear {
-        transform: scale(1.2);
     }
     #trips4 {
         transform: translate(0, 0);
@@ -421,6 +388,13 @@ Permanent Attributes
     #population-six{
         opacity:1
     }
+    #existing-phase2to6{
+        stroke:darken($color-2,15%);
+        stroke-width:1.375;
+    }
+    #existing-phase6{
+        opacity:0;
+    }
 }
 
 
@@ -448,18 +422,6 @@ Permanent Attributes
     }
     #new3 {
         opacity: .33;
-    }
-    #existingphase3 {
-        fill: #59b248;
-    }
-    #existingphase2 {
-        fill: #379a28;
-    }
-    #existingphase1 {
-        fill: #1b7600;
-    }
-    #existinggear {
-        transform: scale(1.3);
     }
     #trips4 {
         transform: translate(0, 0);
@@ -502,6 +464,16 @@ Permanent Attributes
     #population-seven{
         opacity:1
     }
+    #existing-phase2to6{
+        stroke:darken($color-2,15%);
+        stroke-width:1.5;
+    }
+    #existing-phase6{
+        opacity:0;
+    }
+    #existing-phase7{
+        opacity:0;
+    }
 }
 
 
@@ -529,18 +501,6 @@ Permanent Attributes
     }
     #new3 {
         opacity: 1;
-    }
-    #existingphase3 {
-        fill: #59b248;
-    }
-    #existingphase2 {
-        fill: #379a28;
-    }
-    #existingphase1 {
-        fill: #1b7600;
-    }
-    #existinggear {
-        transform: scale(1.4);
     }
     #trips4 {
         transform: translate(0, 0);
@@ -585,5 +545,18 @@ Permanent Attributes
     #population-seven,
     #population-eight{
         opacity:1
+    }
+    #existing-phase2to6{
+        stroke:darken($color-2,15%);
+        stroke-width:1.5;
+    }
+    #existing-phase6{
+        opacity:0;
+    }
+    #existing-phase7{
+        opacity:0;
+    }
+    #existing-phase8{
+        opacity:0;
     }
 }

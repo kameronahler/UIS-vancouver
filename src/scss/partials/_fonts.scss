@@ -4,25 +4,32 @@ Font + Color SMASH
 
 ================================= */
 
-	body:not(.overlay){
-		font-size:16px;
-		font-family:$font-1;
+body:not(.overlay){
+	font-size:16px;
+	font-family:$font-1;
+
+	.mason-timeline-inner{
+		font-size:13px;
+	}
 	
-		.mason-timeline-inner{
-			font-size:13px;
-		}
+	// sorry not sorry
+	h1,h2,h3,h4,h5,h6{
+		font-family:$font-2 !important;
+	}
+	
+	// sorry not sorry
+	.button,button,input[type="submit"],input[type="button"]{
+		font-family:$font-2 !important;
+		background:$color-2 !important;
+	}
+	
+	// sorry not sorry
+	#block-system-main-menu ul li a{
+		font-family:$font-2 !important;
 
-		h1,h2,h3,h4,h5,h6{
-			font-family:$font-2 !important;
-		}
-
-		.button,button,input[type="submit"],input[type="button"]{
-			font-family:$font-2 !important;
-			background:$color-2 !important;
-		}
-
-		#block-system-main-menu ul li a{
-			font-family:$font-2 !important;
+		@media screen and (min-width:740px) and (max-width:979px){
+			font-size:12px !important;
 		}
 	}
+}
 
