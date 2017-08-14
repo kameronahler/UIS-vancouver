@@ -16,16 +16,36 @@ Home
 		margin-bottom:3em;
 
 		@include bp(lg){
-			@include flex(space-between, flex-start);
+			@include flex(space-between, stretch);
 			flex-wrap:wrap;
-			margin-bottom:1.5em;
+			margin-bottom:3rem;
 		}
 
 		p{
+			text-align:center;
+			margin-bottom:1.5em;
+
 			@include bp(lg){
 				height:100%;
-				width:30%;
-				padding:4px;
+				min-height:300px;
+				padding:1.5em;
+				width:31%;
+				padding:1.5em;
+				text-align:center;
+				background:#eee;
+				margin-bottom:0;
+			}
+		}
+		a{
+			display:block;
+			width:100%;
+			max-width:300px;
+			text-align:center;
+			margin:1em auto 0;
+
+			@include bp(lg){
+				display:inline-block;
+				width:175px;
 			}
 		}
 	}
@@ -39,17 +59,23 @@ Home
 	h1{
 		position:relative;
 		text-align:center;
-		padding: 2em 0;
+		padding: 2em 1rem;
 		color:#fff;
 		z-index:2;
+		overflow:hidden;
+		text-shadow: $text-shadow-1;
 
 		@include bp(md){
-			padding:3em 0;
-			margin-bottom:1.2em;
+			font-size:3rem;
+			width:100vw;
+			padding:2em 1rem;
+			margin: -60px auto 2rem calc(-50vw + (656px / 2))
 		}
 
-		@include bp(md){
-			padding:4em 0;
+		@include bp(lg){
+			margin: -60px auto 3.5rem calc(-50vw + (896px / 2));
+			font-size:4rem;
+			padding:1.5em 1rem;
 		}
 
 		&::before{
@@ -58,7 +84,7 @@ Home
 			display:block;
 			width:100%;
 			height:100%;
-			background: linear-gradient(15deg, lighten($color-1,0%), lighten($color-2,30%));
+			background: $color-hero-gradient;
 			z-index:-1;
 		}
 		&::after{
@@ -67,7 +93,7 @@ Home
 			display:block;
 			width:100%;
 			height:100%;
-			background: transparent url('/files/home.jpg') no-repeat 50%;
+			background: transparent url('/files/home3.jpg') no-repeat 50% 60%;
 			background-size:cover;
 			z-index:-1;
 			opacity:.2;
@@ -77,35 +103,63 @@ Home
 
 	section:nth-child(2){
 		padding:2em 1em;
-        background: linear-gradient(15deg, $color-1, lighten($color-1, 5%));
 		margin:0 auto;
 
 		@include bp(md){
-			padding:2em 3em;
-			box-shadow:$box-shadow-3;
+			// box-shadow:$box-shadow-3;
+			@include flex();
+			padding:0;
 		}
-
-		@include bp(lg){
-			width:90%;
+		
+		.left{
+			@include bp(md){
+				width:61.875%;
+				padding:1em;
+			}
 		}
+		nav{
+			@include bp(md){
+				width:38.125%;
+				margin-top:1em;
+			}
 
+			ul{
+				@include bp(md){
+					background: linear-gradient(15deg, $color-1, lighten($color-1, 5%));
+					padding:2em 1em;
+				}
+			}
+		}
 		header{
 			text-align:center;
-			color:#fff;
-			margin-bottom:1.2em;
+			// color:#fff;
+
+			@include bp(md){
+				text-align:left;
+			}
 		}
 
 		h2{
 			border-radius:2px;
-			padding:1em;
+			@include bp(md){
+				text-align:center;
+				color:$color-1;
+			}
 		}
 
 		p{
-			color:#fff;
+			@include bp(md){
+				text-align:left;
+				width:100%;
+				background:transparent;
+				min-height:initial;
+				padding-top:0;
+			}
+			// color:#fff;
 		}
 
 		ul{
-			color:#fff;
+			// color:#fff;
 			list-style:none;
 			margin-left:0;
 			padding-left:0;
@@ -120,6 +174,7 @@ Home
 		li{
 			@include bp(md){
 				text-align:center;
+				color:#fff;
 			}
 		}
 		.header{
@@ -129,10 +184,13 @@ Home
 
 			@include bp(md){
 				width:100%;
+				font-size:19px;
+				margin-top:0;
 			}
 
 			@include bp(lg){
-				margin: 1.2em 0;
+				
+				margin-top:0;
 			}
 		}
 
@@ -155,9 +213,13 @@ Home
 /* ------------------------------
 Interactive Graphic
 -------------------------------- */
-// DOESN'T WORK BECAUSE OF STUPID STYLING INSIDE THING LINK
 
-// .home-thinglink{
+.home-thinglink{
+	h2{
+		text-align:center;
+		color:$color-1;
+	}
+	// DOESN'T WORK BECAUSE OF STUPID STYLING INSIDE THING LINK
 	// .field-item.item1{
 	// 	position:relative;
 	// 	padding-left:0;
@@ -168,4 +230,4 @@ Interactive Graphic
 	// 	@include absolute(0,0);
 	// 	width:100%;
 	// }
-// }
+}

@@ -4,7 +4,9 @@ Timeline
 
 ==================================*/
 .page-node-18{
-
+	#page-title{
+		@include hide;
+	}
 	#launcher{
 		display:none;
 	}

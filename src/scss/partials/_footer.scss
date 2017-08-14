@@ -1,0 +1,23 @@
+#zone-footer{
+	margin-bottom:0 !important
+}
+
+#zone-postscript-wrapper,
+#section-footer{
+	background:$color-1;
+}
+
+#zone-postscript-wrapper{
+	font-size:75%;
+}
+
+.region-postscript-fourth-inner{
+	.content{
+		padding-bottom:0 !important;
+	}
+	#block-bean-ep-footer-google-translate{
+		h2{
+			display:none;
+		}
+	}
+}

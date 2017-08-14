@@ -3,8 +3,8 @@
 Vancouver Vars
 
 ==================================*/
-$font-1:Quicksand,Helvetica,sans-serif;
-$font-2:Montserrat,Helvetica,sans-serif;
+$font-1:Quicksand,Helvetica,Arial,sans-serif;
+$font-2:Montserrat,Helvetica,Arial,sans-serif;
 $color-1: #0279B1;
 $color-2: #5DA61B;
 $color-3: #e7df9d;
@@ -17,6 +17,7 @@ $color-cycle-bad-5: #9ec199;
 $color-cycle-bad-6: #81c784;
 $color-cycle-bad-7: #66bb6a;
 $color-cycle-bad-8: $color-2;
+$color-hero-gradient: linear-gradient(15deg, lighten($color-1,0%), lighten($color-2,30%));
 $border-radius-bar-chart: 99px;
 $box-shadow-1: inset 0 2px 10px -1px rgba(black, .2);
 $box-shadow-2: inset 0 4px 6px -1px rgba(black, .2);
